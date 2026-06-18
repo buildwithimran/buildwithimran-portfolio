@@ -1,0 +1,1235 @@
+<!-- ============================================================
+     PORTFOLIO — Premium developer build
+============================================================ -->
+
+<!-- Header -->
+<nav
+  class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/85 backdrop-blur-xl"
+>
+  <div class="max-w-[1300px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3 min-w-0">
+      <a href="#home" (click)="scrollToTop(); closeMobileMenu()" class="flex items-center gap-3 group">
+        <div
+          class="w-10 h-10 bg-primary rounded-md flex items-center justify-center text-background-dark font-black shadow-glow-soft group-hover:rotate-3 transition-transform flex-shrink-0"
+        >
+          <span class="material-symbols-outlined !text-2xl">layers</span>
+        </div>
+        <div class="hidden sm:flex flex-col leading-none min-w-0">
+          <span class="text-white font-bold tracking-tight text-base uppercase truncate"
+            >Muhammad Imran</span
+          >
+          <span class="text-[10px] text-primary font-mono uppercase tracking-[0.28em] truncate"
+            >Full-Stack Engineer</span
+          >
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop nav -->
+    <div class="hidden lg:flex items-center gap-1">
+      @for (link of navLinks; track link.id) {
+        <a
+          class="px-4 py-2 rounded-md text-[11px] font-mono font-medium transition-all nav-pill uppercase tracking-[0.22em]"
+          [href]="'#' + link.id"
+          [class.active]="activeSection() === link.id"
+          >{{ link.label }}</a
+        >
+      }
+    </div>
+
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Social icon buttons -->
+      <a
+        [href]="githubUrl"
+        target="_blank"
+        rel="noopener"
+        class="hidden sm:flex w-9 h-9 items-center justify-center border border-border-bright rounded-md text-ink-muted hover:border-primary hover:text-primary transition-colors"
+        aria-label="GitHub profile"
+        title="GitHub"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path
+            d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.11.79-.25.79-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.6.23 2.78.11 3.07.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12v3.14c0 .3.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"
+          />
+        </svg>
+      </a>
+      <a
+        [href]="linkedInUrl"
+        target="_blank"
+        rel="noopener"
+        class="hidden sm:flex w-9 h-9 items-center justify-center border border-border-bright rounded-md text-ink-muted hover:border-primary hover:text-primary transition-colors"
+        aria-label="LinkedIn profile"
+        title="LinkedIn"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="assets/resume/Imran-Arshad-Resume.pdf"
+        (click)="downloadResume()"
+        download="Muhammad_Imran_Arshad_Resume.pdf"
+        target="_blank"
+        class="hidden sm:inline-flex"
+      >
+        <button
+          class="border border-primary/40 text-primary px-4 lg:px-5 py-2 text-[11px] font-mono font-bold uppercase tracking-[0.22em] rounded-md hover:bg-primary hover:text-background-dark transition-colors"
+        >
+          Resume
+        </button>
+      </a>
+
+      <!-- Mobile menu trigger -->
+      <button
+        type="button"
+        (click)="toggleMobileMenu()"
+        class="lg:hidden w-10 h-10 flex items-center justify-center border border-border-bright rounded-md text-white hover:border-primary hover:text-primary transition-colors"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="material-symbols-outlined !text-2xl">
+          {{ mobileMenuOpen() ? 'close' : 'menu' }}
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  @if (mobileMenuOpen()) {
+    <div class="lg:hidden border-t border-border-dark bg-background-dark/95 backdrop-blur-xl animate-fade-in">
+      <div class="max-w-[1300px] mx-auto px-6 py-5 flex flex-col gap-1">
+        @for (link of navLinks; track link.id) {
+          <a
+            class="px-4 py-3 rounded-md text-xs font-mono font-bold transition-all nav-pill uppercase tracking-[0.22em] flex items-center justify-between"
+            [href]="'#' + link.id"
+            [class.active]="activeSection() === link.id"
+            (click)="closeMobileMenu()"
+          >
+            <span>{{ link.label }}</span>
+            <span class="material-symbols-outlined !text-base text-ink-faint">arrow_forward</span>
+          </a>
+        }
+
+        <!-- Social + Resume row -->
+        <div class="mt-4 pt-4 border-t border-border-dark flex items-center gap-3">
+          <a
+            [href]="githubUrl"
+            target="_blank"
+            rel="noopener"
+            (click)="closeMobileMenu()"
+            class="flex-1 flex items-center justify-center gap-2 py-3 border border-border-bright rounded-md text-ink-muted hover:border-primary hover:text-primary transition-colors"
+            aria-label="GitHub profile"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+              <path
+                d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.11.79-.25.79-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.6.23 2.78.11 3.07.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12v3.14c0 .3.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"
+              />
+            </svg>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.22em]">GitHub</span>
+          </a>
+          <a
+            [href]="linkedInUrl"
+            target="_blank"
+            rel="noopener"
+            (click)="closeMobileMenu()"
+            class="flex-1 flex items-center justify-center gap-2 py-3 border border-border-bright rounded-md text-ink-muted hover:border-primary hover:text-primary transition-colors"
+            aria-label="LinkedIn profile"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+              />
+            </svg>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.22em]">LinkedIn</span>
+          </a>
+        </div>
+
+        <a
+          href="assets/resume/Imran-Arshad-Resume.pdf"
+          (click)="downloadResume(); closeMobileMenu()"
+          download="Muhammad_Imran_Arshad_Resume.pdf"
+          target="_blank"
+          class="mt-3"
+        >
+          <button
+            class="w-full border border-primary/40 text-primary px-4 py-3 text-[11px] font-mono font-bold uppercase tracking-[0.22em] rounded-md hover:bg-primary hover:text-background-dark transition-colors"
+          >
+            Download Resume
+          </button>
+        </a>
+      </div>
+    </div>
+  }
+</nav>
+
+<!-- Main Content -->
+<main>
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home" class="max-w-[1300px] mx-auto px-6 pt-16 pb-24 lg:pt-20 lg:pb-28 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- LEFT: Copy -->
+      <div class="lg:col-span-7 flex flex-col gap-10">
+        <div class="flex flex-col gap-6">
+          <span class="section-eyebrow hero-enter" data-delay="1">
+            Senior Full-Stack Engineer · Cloud · Production SaaS
+          </span>
+
+          <h1
+            class="hero-headline font-black leading-[0.92] tracking-tight uppercase hero-enter"
+            data-delay="2"
+          >
+            <span class="block">Production SaaS,</span>
+            <span class="block"><span class="text-primary">interface</span> to</span>
+            <span class="block"><span class="text-primary">infrastructure</span>.</span>
+          </h1>
+
+          <p
+            class="text-ink-muted text-base md:text-lg max-w-xl leading-relaxed hero-enter"
+            data-delay="3"
+          >
+            Angular interfaces. Node and NestJS APIs. Background workers on Redis and BullMQ.
+            Deployed on AWS, EC2, and Hostinger. I design the data model, harden the worker layer,
+            and own the deploy.
+          </p>
+        </div>
+
+        <!-- Trust signals: real production stack -->
+        <div class="flex flex-wrap items-center gap-3 hero-enter" data-delay="4">
+          <div class="stat-badge">
+            <span class="material-symbols-outlined text-primary !text-xl">rocket_launch</span>
+            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >Owned SaaS in production</span
+            >
+          </div>
+          <div class="stat-badge">
+            <span class="text-primary font-black text-lg font-mono"
+              >{{ professionalWorkYears }}+</span
+            >
+            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >Years shipping</span
+            >
+          </div>
+          <div class="stat-badge">
+            <span class="material-symbols-outlined text-accent-blue !text-xl">memory</span>
+            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >Redis · BullMQ · Workers</span
+            >
+          </div>
+          <div class="stat-badge">
+            <span class="material-symbols-outlined text-accent-amber !text-xl">cloud</span>
+            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >AWS · EC2 · Hostinger</span
+            >
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-4 hero-enter" data-delay="5">
+          <a
+            href="#projects"
+            class="bg-primary text-background-dark px-8 py-4 font-black uppercase tracking-[0.2em] text-xs rounded-md hover:scale-[1.03] transition-transform shadow-glow-soft flex items-center gap-2"
+          >
+            See the Work
+            <span class="material-symbols-outlined !text-lg">arrow_forward</span>
+          </a>
+          <a
+            href="#contact"
+            class="border border-border-bright text-white px-7 py-4 text-xs font-black uppercase tracking-[0.2em] rounded-md hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
+          >
+            Start a Project
+          </a>
+          <!-- Intro audio button hidden for now — kept in DOM as hidden so audio
+               element + handlers stay wired without losing the asset path. -->
+          <button
+            type="button"
+            (click)="toggleAudio()"
+            class="hidden"
+            [attr.aria-hidden]="true"
+            tabindex="-1"
+          ></button>
+
+          <audio #audioPlayer preload="auto" (ended)="onAudioEnded()" class="hidden">
+            <source src="./assets/audio-intro/intro.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo + telemetry -->
+      <div class="lg:col-span-5 relative hero-enter" data-delay="3">
+        <div
+          class="hero-photo-frame relative"
+          [style.transform]="'translateY(' + (-heroPhotoOffset()) + 'px)'"
+          style="transition: transform 0.1s linear"
+        >
+          <div class="hero-photo">
+            <img
+              [src]="profileImageUrl"
+              alt="Muhammad Imran Arshad — Full-Stack Engineer"
+              loading="eager"
+              decoding="async"
+            />
+
+            <!-- Overlay frame markers -->
+            <div class="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse-dot"></span>
+                <span class="text-[10px] font-mono text-primary tracking-[0.2em] uppercase"
+                  >LIVE</span
+                >
+              </div>
+              <span class="text-[10px] font-mono text-ink-faint tracking-[0.2em] uppercase"
+                >./imran.tsx</span
+              >
+            </div>
+
+            <!-- Identity strip at bottom -->
+            <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+              <div class="flex items-end justify-between">
+                <div>
+                  <p class="text-[10px] font-mono text-primary tracking-[0.3em] uppercase">
+                    Engineer
+                  </p>
+                  <p class="text-xl font-black text-white tracking-tight">Imran Arshad</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-[10px] font-mono text-ink-faint tracking-[0.2em] uppercase">
+                    Based in
+                  </p>
+                  <p class="text-xs text-ink-muted font-mono">Faisalabad · PK</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Telemetry pills around the photo -->
+          <div class="telemetry-pill" style="top: 18%; left: -8%; animation: float-slow 7s ease-in-out infinite;">
+            <span class="dot"></span>
+            <span>workers.online = 4</span>
+          </div>
+          <div
+            class="telemetry-pill cyan"
+            style="top: 52%; right: -10%; animation: float-slow 8s ease-in-out infinite 1s;"
+          >
+            <span class="dot"></span>
+            <span>queue:jobs · 2.4k/min</span>
+          </div>
+          <div
+            class="telemetry-pill amber"
+            style="bottom: 8%; left: -6%; animation: float-slow 9s ease-in-out infinite 0.5s;"
+          >
+            <span class="dot"></span>
+            <span>deploy: success</span>
+          </div>
+        </div>
+
+        <!-- Decorative offset bracket -->
+        <div
+          class="hidden lg:block absolute -bottom-6 -right-2 text-[10px] font-mono text-ink-faint tracking-[0.3em] uppercase"
+        >
+          [ figure_01 ]
+        </div>
+      </div>
+    </div>
+
+    <!-- Ambient typo behind hero -->
+    <div
+      class="absolute top-1/2 right-0 -translate-y-1/2 pointer-events-none select-none opacity-[0.025] -z-10 hidden xl:block"
+    >
+      <h2 class="text-[24rem] font-black leading-none rotate-90 font-mono">SHIP_IT</h2>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TICKER — real production tech
+  ============================================================ -->
+  <section
+    class="border-y border-border-muted py-5 bg-surface-1/40 overflow-hidden ticker-mask"
+    aria-hidden="true"
+  >
+    <div class="ticker-track">
+      @for (group of [1, 2]; track group) {
+        @for (item of tickerItems(); track $index) {
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary/60"></span>
+            <span
+              class="text-[11px] font-mono text-ink-muted uppercase tracking-[0.22em] whitespace-nowrap"
+              >{{ item }}</span
+            >
+          </div>
+        }
+      }
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED CASE STUDIES
+  ============================================================ -->
+  <section id="projects" class="py-28 lg:py-32">
+    <div class="max-w-[1300px] mx-auto px-6 flex flex-col">
+      <div class="mb-16 scroll-animate">
+        <div class="section-eyebrow mb-5">[ 01 ] · Selected work</div>
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[0.95] tracking-tight uppercase">
+            Shipped, <span class="text-ink-faint">not slideware</span>
+          </h2>
+          <p class="text-ink-muted text-base max-w-md leading-relaxed">
+            Owned SaaS and client builds — each one live in production today. Architecture,
+            interface, backend, and deploy.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for (project of filteredProjects(); track project.title; let i = $index) {
+          <div
+            class="glass-card flex flex-col p-5 group scroll-animate"
+            [style.transition-delay]="i * 80 + 'ms'"
+          >
+            <div
+              class="relative overflow-hidden mb-5 aspect-video rounded-md border border-border-dark project-image-bg"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-background-dark/85 via-background-dark/10 to-transparent z-10"
+              ></div>
+              <div class="absolute top-3 right-3 z-20">
+                <span
+                  class="text-[9px] font-mono border px-2 py-1 rounded-sm tracking-[0.18em] bg-background-dark/60 backdrop-blur-md"
+                  [class]="project.statusClass"
+                  >{{ project.status }}</span
+                >
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 z-20 flex flex-wrap gap-1.5">
+                @for (tech of project.tech; track tech.name) {
+                  <div
+                    class="px-2 py-1 bg-black/60 backdrop-blur-md rounded-sm border border-white/10 flex items-center gap-1.5"
+                  >
+                    <span class="material-symbols-outlined !text-[12px] text-primary">{{
+                      tech.icon
+                    }}</span>
+                    <span class="text-[9px] font-mono font-bold uppercase tracking-wider">{{
+                      tech.name
+                    }}</span>
+                  </div>
+                }
+              </div>
+              @if (project.imageUrl) {
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-[1.06] transition-transform duration-700"
+                  [style.background-image]="'url(' + project.imageUrl + ')'"
+                ></div>
+              }
+            </div>
+            <div class="flex flex-col flex-1">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold uppercase tracking-tight">{{ project.title }}</h3>
+                <span class="text-[9px] font-mono font-bold uppercase tracking-[0.2em] text-primary/70 mt-1">{{
+                  project.type
+                }}</span>
+              </div>
+              <p class="text-ink-muted text-sm mb-6 leading-relaxed flex-1">
+                {{ project.description }}
+              </p>
+              <div class="flex gap-2 mt-auto">
+                @if (project.videoUrl) {
+                  <button
+                    (click)="openVideoModal(project.videoUrl)"
+                    class="flex-1 bg-primary/80 text-background-dark py-2.5 px-3 rounded-sm text-[10px] font-black uppercase tracking-[0.16em] hover:bg-primary transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <span class="material-symbols-outlined !text-[14px]">play_circle</span>
+                    Demo
+                  </button>
+                }
+                @for (link of project.links; track link.url) {
+                  <a
+                    [href]="link.url"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex-1 bg-primary text-background-dark py-2.5 px-3 rounded-sm text-[10px] font-black uppercase tracking-[0.16em] hover:scale-[1.03] transition-transform flex items-center justify-center gap-1.5"
+                  >
+                    <span class="material-symbols-outlined !text-[14px]">{{ link.icon }}</span>
+                    Live
+                  </a>
+                }
+                <button
+                  (click)="openProjectModal(project)"
+                  class="flex-1 border border-border-bright text-white py-2.5 px-3 rounded-sm text-[10px] font-black uppercase tracking-[0.16em] hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-1.5"
+                >
+                  <span class="material-symbols-outlined !text-[14px]">article</span>
+                  Case
+                </button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       IMPACT IN NUMBERS
+  ============================================================ -->
+  <section id="impact" class="max-w-[1300px] mx-auto px-6 py-24 lg:py-28">
+    <div class="mb-16 scroll-animate">
+      <div class="section-eyebrow mb-5">[ 02 ] · Receipts</div>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase">
+        Outcomes, <span class="text-ink-faint">not adjectives</span>
+      </h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+      @for (metric of impactMetrics(); track metric.label; let i = $index) {
+        <div
+          class="relative surface p-7 overflow-hidden group scroll-animate"
+          [style.transition-delay]="i * 80 + 'ms'"
+        >
+          <span
+            class="absolute -top-4 -right-3 text-[7rem] font-black text-primary/[0.06] leading-none select-none pointer-events-none group-hover:text-primary/[0.12] transition-colors font-display"
+          >
+            {{ metric.value }}
+          </span>
+          <div class="relative flex flex-col gap-3">
+            <span class="text-5xl md:text-6xl font-black text-primary leading-none tracking-tight font-display">
+              {{ metric.value }}
+            </span>
+            <h3 class="text-base font-bold uppercase tracking-wide text-white">
+              {{ metric.label }}
+            </h3>
+            <p class="text-sm text-ink-muted leading-relaxed">{{ metric.context }}</p>
+            <span class="text-[10px] font-mono uppercase tracking-[0.22em] text-primary/60 mt-1"
+              >— {{ metric.project }}</span
+            >
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE / CAREER PATH
+  ============================================================ -->
+  <section class="max-w-[1300px] mx-auto px-6 py-28 lg:py-32" id="experience">
+    <div class="mb-20 scroll-animate">
+      <div class="section-eyebrow mb-5">[ 03 ] · Track record</div>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase">
+        {{ professionalWorkYears }}+ years <span class="text-ink-faint">shipping in production</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Sticky counter / context -->
+      <div class="lg:col-span-4 lg:sticky top-28 self-start hidden lg:block">
+        <div
+          id="project-counter"
+          class="surface p-7 text-left scroll-animate"
+          style="transition-delay: 200ms"
+        >
+          <p class="text-[10px] font-mono uppercase tracking-[0.28em] text-ink-faint mb-3">
+            Shipped projects
+          </p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-6xl font-black text-primary tracking-tighter tabular-nums font-display"
+              >{{ displayedProjects() }}</span
+            >
+            <span class="text-3xl font-black text-primary/60 font-display">+</span>
+          </div>
+          <p class="text-ink-muted text-sm mt-3">
+            Across owned SaaS and client product work — all live.
+          </p>
+          <div class="h-px bg-border-dark my-6"></div>
+          <p class="text-[10px] font-mono uppercase tracking-[0.28em] text-ink-faint mb-2">
+            Currently
+          </p>
+          <p class="text-white font-bold text-sm">Open to senior full-stack engagements</p>
+          <p class="text-ink-muted text-xs mt-1">Remote · {{ timezone }} · async friendly</p>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="lg:col-span-8">
+        <div class="timeline-container">
+          @for (item of experience(); track item.title; let i = $index) {
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div
+                class="experience-card p-7 scroll-animate w-full"
+                [style.transition-delay]="i * 100 + 'ms'"
+              >
+                <!-- Header -->
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                  <div class="flex items-start gap-5">
+                    <a
+                      [href]="item.companyUrl"
+                      target="_blank"
+                      class="flex-shrink-0 company-logo-wrap"
+                    >
+                      <img
+                        [src]="item.logoUrl"
+                        [alt]="item.company + ' logo'"
+                        class="company-logo-img"
+                      />
+                    </a>
+                    <div>
+                      <h3 class="text-xl font-bold text-white tracking-tight">{{ item.title }}</h3>
+                      <div class="flex items-center gap-3 mt-1 flex-wrap">
+                        <a
+                          [href]="item.companyUrl"
+                          target="_blank"
+                          class="text-sm text-ink-muted font-medium hover:text-primary transition-colors"
+                          >{{ item.company }}</a
+                        >
+                        <span class="text-ink-faint">·</span>
+                        <span
+                          class="text-xs font-bold flex items-center gap-1.5"
+                          [class]="
+                            item.locationType === 'Remote' ? 'text-emerald-400' : 'text-accent-blue'
+                          "
+                        >
+                          <span class="material-symbols-outlined !text-[14px]">{{
+                            item.locationType === 'Remote' ? 'public' : 'apartment'
+                          }}</span>
+                          {{ item.locationType }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="text-[10px] font-mono text-ink-faint px-3 py-1.5 border border-border-dark rounded-sm self-start sm:self-center whitespace-nowrap uppercase tracking-[0.18em]"
+                  >
+                    {{ item.date }}
+                  </div>
+                </div>
+
+                <!-- Meta -->
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink-muted mt-5 border-t border-b border-border-dark py-3 font-mono uppercase tracking-[0.12em]"
+                >
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined !text-[14px] text-primary/70"
+                      >schedule</span
+                    >
+                    <span>{{ calculateDuration(item.startDate, item.endDate) }}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined !text-[14px] text-primary/70"
+                      >pin_drop</span
+                    >
+                    <img
+                      [src]="'https://flagcdn.com/w20/' + item.countryCode + '.png'"
+                      [alt]="item.location + ' flag'"
+                      class="w-4 h-auto"
+                    />
+                    {{ item.location }}
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined !text-[14px] text-primary/70"
+                      >groups</span
+                    >
+                    <span>{{ item.teamSize }}</span>
+                  </div>
+                </div>
+
+                <!-- Body -->
+                <div class="mt-5">
+                  <p class="text-ink leading-relaxed text-sm">
+                    {{ item.description }}
+                  </p>
+                  @if (item.points) {
+                    <ul class="space-y-2.5 mt-5 text-ink-muted text-sm">
+                      @for (point of item.points; track point) {
+                        <li class="flex items-start gap-3 transition-colors hover:text-ink">
+                          <span
+                            class="material-symbols-outlined text-primary !text-[14px] mt-1"
+                            >arrow_forward_ios</span
+                          >
+                          <span>{{ point }}</span>
+                        </li>
+                      }
+                    </ul>
+                  }
+                  @if (item.tags) {
+                    <div class="flex flex-wrap gap-1.5 mt-5">
+                      @for (tag of item.tags; track tag) {
+                        <span
+                          class="px-2.5 py-1 bg-background-dark border border-border-dark text-ink-muted text-[10px] font-mono font-bold uppercase tracking-[0.14em] rounded-sm"
+                        >
+                          {{ tag }}
+                        </span>
+                      }
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BACKEND / CLOUD ARCHITECTURE
+  ============================================================ -->
+  <section id="architecture" class="max-w-[1300px] mx-auto px-6 py-28 lg:py-32">
+    <div class="mb-16 scroll-animate">
+      <div class="section-eyebrow mb-5">[ 04 ] · Backend & cloud</div>
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-[0.95]">
+          The runtime layer<br /><span class="text-ink-faint">behind every SaaS</span>
+        </h2>
+        <p class="text-ink-muted text-base max-w-md leading-relaxed">
+          Queues, workers, schedulers, and cloud deploys. The infrastructure that keeps a product
+          alive after launch day — not just the API around it.
+        </p>
+      </div>
+    </div>
+
+    <!-- Architecture node groups -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+      @for (group of backendSystems(); track group.group; let gi = $index) {
+        <div
+          class="arch-node p-7 scroll-animate"
+          [attr.data-tone]="group.tone"
+          [style.transition-delay]="gi * 100 + 'ms'"
+        >
+          <span class="node-label">{{ '[ 0' + (gi + 1) + ' ]' }}</span>
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-10 h-10 flex items-center justify-center rounded-md border"
+              [class.border-primary]="group.tone === 'primary'"
+              [class.border-accent-blue]="group.tone === 'cyan'"
+              [class.border-accent-amber]="group.tone === 'amber'"
+              [class.bg-primary]="group.tone === 'primary'"
+              [class.bg-opacity-10]="true"
+            >
+              <span
+                class="material-symbols-outlined !text-xl"
+                [class.text-primary]="group.tone === 'primary'"
+                [class.text-accent-blue]="group.tone === 'cyan'"
+                [class.text-accent-amber]="group.tone === 'amber'"
+                >{{ group.icon }}</span
+              >
+            </div>
+            <h3 class="text-lg font-bold uppercase tracking-tight">{{ group.group }}</h3>
+          </div>
+          <ul class="space-y-3">
+            @for (item of group.items; track item.name) {
+              <li
+                class="flex items-start gap-3 py-2 border-t border-border-dark first:border-t-0 group/item"
+              >
+                <span
+                  class="text-[9px] font-mono px-1.5 py-0.5 rounded-xs border border-border-dark text-ink-faint mt-0.5 group-hover/item:text-primary group-hover/item:border-primary/40 transition-colors"
+                  >{{ item.code }}</span
+                >
+                <div class="flex-1">
+                  <p class="text-sm font-bold text-white">{{ item.name }}</p>
+                  <p class="text-xs text-ink-muted mt-0.5">{{ item.detail }}</p>
+                </div>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+
+    <!-- Production proof bar -->
+    <div
+      class="surface p-6 lg:p-8 scroll-animate"
+      style="transition-delay: 200ms"
+    >
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-primary !text-3xl">verified</span>
+          <div>
+            <p class="text-[10px] font-mono uppercase tracking-[0.28em] text-ink-faint">
+              Running in production now
+            </p>
+            <p class="text-white font-bold text-sm mt-0.5">
+              Powering LoyaltyTap, JDrive, and Nexa — my owned SaaS.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 flex-1 lg:max-w-3xl">
+          @for (stat of systemStats(); track stat.label) {
+            <div class="flex items-start gap-2.5 p-3 surface-flat">
+              <span class="material-symbols-outlined !text-[18px] text-primary mt-0.5">{{
+                stat.icon
+              }}</span>
+              <div class="min-w-0">
+                <p class="text-[10px] font-mono uppercase tracking-[0.18em] text-ink-faint">
+                  {{ stat.label }}
+                </p>
+                <p class="text-xs text-white font-bold mt-0.5">{{ stat.value }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TECH STACK
+  ============================================================ -->
+  <section id="stack" class="max-w-[1300px] mx-auto px-6 py-24 lg:py-28">
+    <div class="mb-16 scroll-animate">
+      <div class="section-eyebrow mb-5">[ 05 ] · Toolbox</div>
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase">
+          The stack <span class="text-ink-faint">I ship with</span>
+        </h2>
+        <p class="text-ink-muted text-base max-w-md leading-relaxed">
+          A focused toolbox — chosen for what holds up in production, not what's trending.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
+      <!-- Frontend -->
+      <div class="space-y-6 scroll-animate">
+        <div class="flex items-center gap-4">
+          <span class="text-xl font-black text-primary/30 font-mono">01</span>
+          <h4 class="text-sm font-bold uppercase tracking-[0.22em]">Frontend</h4>
+          <div class="h-px flex-1 bg-border-dark"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          @for (skill of techStack().frontend; track skill.name) {
+            <div class="tech-logo-card">
+              <img
+                [src]="skill.imageUrl"
+                [alt]="skill.name + ' logo'"
+                class="h-8 w-8 object-contain"
+              />
+              <span class="font-mono text-[10px] text-ink-muted text-center uppercase tracking-wider">{{
+                skill.name
+              }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="space-y-6 scroll-animate" style="transition-delay: 100ms">
+        <div class="flex items-center gap-4">
+          <span class="text-xl font-black text-primary/30 font-mono">02</span>
+          <h4 class="text-sm font-bold uppercase tracking-[0.22em]">Backend</h4>
+          <div class="h-px flex-1 bg-border-dark"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          @for (skill of techStack().backend; track skill.name) {
+            <div class="tech-logo-card">
+              <img
+                [src]="skill.imageUrl"
+                [alt]="skill.name + ' logo'"
+                class="h-8 w-8 object-contain"
+                [class.filter]="skill.name === 'Express'"
+                [class.invert]="skill.name === 'Express'"
+              />
+              <span class="font-mono text-[10px] text-ink-muted text-center uppercase tracking-wider">{{
+                skill.name
+              }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="space-y-6 scroll-animate" style="transition-delay: 200ms">
+        <div class="flex items-center gap-4">
+          <span class="text-xl font-black text-primary/30 font-mono">03</span>
+          <h4 class="text-sm font-bold uppercase tracking-[0.22em]">Tools</h4>
+          <div class="h-px flex-1 bg-border-dark"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          @for (skill of techStack().tools; track skill.name) {
+            <div class="tech-logo-card">
+              <img
+                [src]="skill.imageUrl"
+                [alt]="skill.name + ' logo'"
+                class="h-8 w-8 object-contain"
+              />
+              <span class="font-mono text-[10px] text-ink-muted text-center uppercase tracking-wider">{{
+                skill.name
+              }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WORK PROCESS
+  ============================================================ -->
+  <section id="process" class="py-28 lg:py-32">
+    <div class="max-w-[1300px] mx-auto px-6">
+      <div class="mb-20 scroll-animate">
+        <div class="section-eyebrow mb-5">[ 06 ] · Engineering process</div>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-[0.95]"
+          >
+            From data model <br /><span class="text-ink-faint">to deploy</span>
+          </h2>
+          <p class="text-ink-muted text-base max-w-md leading-relaxed">
+            A repeatable six-stage process — refined across owned SaaS launches and senior client
+            builds. Every project gets the same spine.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        @for (step of workProcess(); track step.step; let i = $index) {
+          <div
+            class="process-step scroll-animate"
+            [style.transition-delay]="i * 80 + 'ms'"
+          >
+            <span class="step-num">{{ step.step }}</span>
+            <h3 class="text-lg font-bold text-white mt-1 mb-2 tracking-tight">
+              {{ step.title }}
+            </h3>
+            <p class="text-sm text-ink-muted leading-relaxed">{{ step.detail }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES / PACKAGES
+  ============================================================ -->
+  <section id="services" class="py-24 lg:py-28">
+    <div class="max-w-[1300px] mx-auto px-6">
+      <div class="mb-16 scroll-animate">
+        <div class="section-eyebrow mb-5">[ 07 ] · Engagements</div>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase">
+            Ways we <span class="text-ink-faint">can work together</span>
+          </h2>
+          <p class="text-ink-muted text-base max-w-md leading-relaxed">
+            Three focused engagements — sized for the work, scoped for delivery, priced on outcome.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        @for (pkg of packages(); track pkg.title; let i = $index) {
+          <div class="package-card scroll-animate" [style.transition-delay]="i * 80 + 'ms'">
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-mono uppercase tracking-[0.22em] text-primary mb-2 block"
+                >Package · 0{{ i + 1 }}</span
+              >
+              <h3 class="text-xl font-bold text-white mb-3 tracking-tight">{{ pkg.title }}</h3>
+              <p class="text-ink-muted text-sm mb-6 leading-relaxed">{{ pkg.description }}</p>
+              <ul class="space-y-2.5 mb-7">
+                @for (item of pkg.deliverables; track item) {
+                  <li class="flex items-start gap-2.5 text-ink text-sm">
+                    <span class="material-symbols-outlined text-primary/80 !text-[16px] mt-0.5"
+                      >check_circle</span
+                    >
+                    <span>{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+            <div class="mt-auto pt-4 border-t border-border-dark">
+              <a
+                href="#contact"
+                class="w-full block text-center bg-primary text-background-dark py-3 px-4 rounded-md text-[11px] font-black uppercase tracking-[0.2em] hover:scale-[1.02] transition-transform"
+              >
+                {{ pkg.price }}
+              </a>
+              <p
+                class="text-center text-[10px] font-mono uppercase tracking-[0.2em] text-ink-faint mt-3"
+              >
+                Timeline · {{ pkg.timeline }}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="relative border-t border-border-muted pt-28 pb-20 px-6">
+    <div class="max-w-4xl mx-auto w-full scroll-animate">
+      <div class="section-eyebrow mb-6">[ 08 ] · Next step</div>
+      <h2
+        class="text-4xl md:text-6xl font-black mb-5 leading-[0.95] tracking-tight uppercase"
+      >
+        Got a system <br />
+        to <span class="text-primary">ship?</span>
+      </h2>
+      <p class="text-ink-muted max-w-xl text-base leading-relaxed mb-12">
+        New build, a stalled MVP, or a backend that needs queues and workers under it — send the
+        brief. Replies inside 24 hours.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a
+          [href]="'mailto:' + email"
+          class="contact-tile p-5 flex items-center gap-4"
+        >
+          <span class="material-symbols-outlined !text-3xl text-primary flex-shrink-0">email</span>
+          <span class="text-left flex-1 min-w-0">
+            <span class="font-bold block text-white">Send a Brief</span>
+            <span class="text-[10px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >Reply in 24h</span
+            >
+          </span>
+          <span class="material-symbols-outlined !text-base text-ink-faint">arrow_outward</span>
+        </a>
+        <a
+          [href]="whatsAppUrl"
+          target="_blank"
+          rel="noopener"
+          class="contact-tile p-5 flex items-center gap-4"
+        >
+          <span class="material-symbols-outlined !text-3xl text-emerald-400 flex-shrink-0">sms</span>
+          <span class="text-left flex-1 min-w-0">
+            <span class="font-bold block text-white">Message</span>
+            <span class="text-[10px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >WhatsApp</span
+            >
+          </span>
+          <span class="material-symbols-outlined !text-base text-ink-faint">arrow_outward</span>
+        </a>
+        <a
+          [href]="linkedInUrl"
+          target="_blank"
+          rel="noopener"
+          class="contact-tile p-5 flex items-center gap-4"
+        >
+          <span class="text-accent-blue flex-shrink-0">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+              />
+            </svg>
+          </span>
+          <span class="text-left flex-1 min-w-0">
+            <span class="font-bold block text-white">Vet the Profile</span>
+            <span class="text-[10px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >LinkedIn</span
+            >
+          </span>
+          <span class="material-symbols-outlined !text-base text-ink-faint">arrow_outward</span>
+        </a>
+        <a
+          [href]="githubUrl"
+          target="_blank"
+          rel="noopener"
+          class="contact-tile p-5 flex items-center gap-4"
+        >
+          <span class="text-accent-amber flex-shrink-0">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7" aria-hidden="true">
+              <path
+                d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.11.79-.25.79-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.6.23 2.78.11 3.07.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12v3.14c0 .3.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"
+              />
+            </svg>
+          </span>
+          <span class="text-left flex-1 min-w-0">
+            <span class="font-bold block text-white">Read the Code</span>
+            <span class="text-[10px] text-ink-muted font-mono uppercase tracking-[0.18em]"
+              >GitHub</span
+            >
+          </span>
+          <span class="material-symbols-outlined !text-base text-ink-faint">arrow_outward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Scroll to Top Button -->
+@if (showScrollToTop()) {
+  <button
+    (click)="scrollToTop()"
+    class="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-primary text-background-dark rounded-md shadow-glow-soft hover:scale-110 transition-all duration-300 animate-slide-in-up"
+    aria-label="Scroll to top"
+  >
+    <span class="material-symbols-outlined !text-2xl">keyboard_arrow_up</span>
+  </button>
+}
+
+<!-- Video Modal -->
+@if (selectedVideoId(); as videoId) {
+  <div
+    class="fixed inset-0 bg-black/85 backdrop-blur-sm z-[999] flex items-center justify-center animate-fade-in"
+    (click)="closeVideoModal()"
+  >
+    <div
+      class="relative w-full max-w-4xl aspect-video p-4 animate-zoom-in"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        (click)="closeVideoModal()"
+        class="absolute -top-4 -right-4 z-10 w-11 h-11 flex items-center justify-center bg-primary text-background-dark rounded-md text-2xl hover:scale-110 hover:rotate-90 transition-transform duration-300"
+      >
+        &times;
+      </button>
+      <div class="w-full h-full rounded-md shadow-2xl shadow-primary/20 overflow-hidden">
+        <youtube-player
+          [videoId]="videoId"
+          [width]="width"
+          [height]="height"
+          [playerVars]="{ autoplay: 1, modestbranding: 1, rel: 0 }"
+        ></youtube-player>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Project Details Modal -->
+@if (selectedProject(); as project) {
+  <div
+    class="fixed inset-0 bg-black/85 backdrop-blur-sm z-[998] flex items-center justify-center p-4 animate-fade-in"
+    (click)="closeProjectModal()"
+  >
+    <div
+      class="relative w-full max-w-5xl max-h-[90vh] bg-card-dark border border-border-dark rounded-md animate-zoom-in flex flex-col"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="flex-shrink-0 p-6 flex items-center justify-between border-b border-border-dark">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-[0.28em] text-ink-faint">Case study</span>
+          <h2 class="text-2xl font-bold text-primary uppercase tracking-tight mt-1">
+            {{ project.title }}
+          </h2>
+          <p class="text-sm text-ink-muted">{{ project.subTitle }}</p>
+        </div>
+        <button
+          (click)="closeProjectModal()"
+          class="w-10 h-10 flex items-center justify-center text-ink-muted hover:text-white hover:bg-white/10 rounded-md transition-colors"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="flex-1 p-8 overflow-y-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2 space-y-8">
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-primary/80 mb-3">
+                The Problem
+              </h3>
+              <p class="text-ink leading-relaxed text-sm">{{ project.problem }}</p>
+            </div>
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-primary/80 mb-3">
+                What I Shipped
+              </h3>
+              <ul class="space-y-2">
+                @for (feature of project.whatYouShipped; track feature) {
+                  <li class="flex items-start gap-2 text-ink text-sm">
+                    <span class="material-symbols-outlined text-primary/80 !text-base mt-px"
+                      >check_small</span
+                    >
+                    <span>{{ feature }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-primary/80 mb-3">
+                My Role & Contribution
+              </h3>
+              <p class="text-ink leading-relaxed text-sm">{{ project.myRole }}</p>
+            </div>
+          </div>
+          <div class="space-y-8 bg-background-dark p-6 rounded-md border border-border-dark">
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-accent-blue mb-3">
+                The Impact
+              </h3>
+              <ul class="space-y-2">
+                @for (item of project.impact; track item) {
+                  <li class="flex items-start gap-2 text-ink text-sm">
+                    <span class="material-symbols-outlined text-accent-blue !text-base mt-px"
+                      >trending_up</span
+                    >
+                    <span>{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-accent-blue mb-3">
+                Constraints
+              </h3>
+              <ul class="space-y-2">
+                @for (item of project.constraints; track item) {
+                  <li class="flex items-start gap-2 text-ink-muted text-sm">
+                    <span class="material-symbols-outlined text-ink-faint !text-base mt-px">lock</span>
+                    <span>{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Resume Download Toast -->
+@if (showResumeToast()) {
+  <div
+    class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[1000] bg-primary text-background-dark px-6 py-3 rounded-md shadow-lg flex items-center gap-3 animate-slide-in-up"
+  >
+    <span class="material-symbols-outlined">celebration</span>
+    <span class="text-sm font-bold">Thanks for downloading my resume!</span>
+  </div>
+}
+
+<!-- Footer -->
+<footer class="px-6 py-6 relative bg-background-dark border-t border-border-muted">
+  <div
+    class="max-w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+  >
+    <div class="text-ink-faint text-[10px] font-mono uppercase tracking-[0.22em]">
+      © {{ currentYear }} · MUHAMMAD IMRAN ARSHAD · {{ domain.toUpperCase() }}
+    </div>
+    <div class="flex items-center gap-3">
+      <a
+        [href]="githubUrl"
+        target="_blank"
+        rel="noopener"
+        class="w-8 h-8 flex items-center justify-center text-ink-faint hover:text-primary transition-colors"
+        aria-label="GitHub"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path
+            d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.11.79-.25.79-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.6.23 2.78.11 3.07.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12v3.14c0 .3.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"
+          />
+        </svg>
+      </a>
+      <a
+        [href]="linkedInUrl"
+        target="_blank"
+        rel="noopener"
+        class="w-8 h-8 flex items-center justify-center text-ink-faint hover:text-primary transition-colors"
+        aria-label="LinkedIn"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+          />
+        </svg>
+      </a>
+      <a
+        [href]="'mailto:' + email"
+        class="w-8 h-8 flex items-center justify-center text-ink-faint hover:text-primary transition-colors"
+        aria-label="Email"
+      >
+        <span class="material-symbols-outlined !text-xl">mail</span>
+      </a>
+    </div>
+  </div>
+</footer>

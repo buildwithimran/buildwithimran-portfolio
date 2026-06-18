@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "buildwithimran",
+    "public": "dist/buildwithimran/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

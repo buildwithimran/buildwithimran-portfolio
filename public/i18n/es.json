@@ -1,0 +1,1292 @@
+{
+  "ACCOUNT": {
+    "EXPORT": "Exportar",
+    "NO_RECORD_FOUND": "No se encontraron datos",
+    "companyInformation": "Información de la empresa",
+    "EDIT": "Editar",
+    "companyName": "Nombre de la empresa",
+    "phoneNumber": "Número de teléfono",
+    "address": "Dirección",
+    "INFORMATION_TITLE": "Información",
+    "PHONE": "Teléfono",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "STATUS": "Estado",
+    "nextPayment": "Próximo pago",
+    "nextPaymentAmount": "Cantidad",
+    "month": "Mes",
+    "ADD_STRIPE": "Agregar",
+    "CARD_NUMBER": "Número de tarjeta",
+    "EXPIRY_DATE": "Fecha de vencimiento",
+    "CVC": "CVC",
+    "PASS_IS_REUIRED": "La contraseña es obligatoria",
+    "EMAIL_IS_REUIRED": "El correo electrónico es obligatorio",
+    "VALID_EMAIL": "Ingrese una dirección de correo válida",
+    "name": "Nombre",
+    "SEARCH_PLACEHOLDER": "Buscar aquí...",
+    "paymentMethod": "Método de pago",
+    "NAME_CARD_HOLDER": "Nombre del titular de la tarjeta",
+    "contactInformation": "Información de contacto",
+    "MANAGE_ACCOUNT": "Administrar cuenta",
+    "LOGOUT": "Cerrar sesión",
+    "DATE": "Fecha",
+    "TIME": "Hora",
+    "RATING": "Calificación",
+    "GOOGLE_REVIEW_IN_TOUCH": "Revisión de Google clicada",
+    "COMMENT": "Comentario",
+    "DATE_TIME": "Fecha y hora",
+    "NO_REVIEWS": "No se encontraron comentarios",
+    "UPLOAD_LOGO": "Subir logo",
+    "CHANGE_LOGO": "Cambiar logo",
+    "PaymentFailed": "Pago fallido:",
+    "PaymentSucceeded": "Pago realizado correctamente",
+    "InvalidForm": "Formulario inválido",
+    "PasswordChanged": "Contraseña cambiada",
+    "InvalidCompanyName": "Por favor ingrese un nombre de empresa válido",
+    "GeneralErrorRetryLater": "Ocurrió un error. Por favor intente nuevamente más tarde.",
+    "ITEMS_PER_PAGE": "Elementos por página",
+    "SHOWING": "Mostrando",
+    "OF": "de",
+    "ENTRIES": "entradas",
+    "TABLE_VIEW": "Vista de tabla",
+    "CARD_VIEW": "Vista de tarjeta",
+    "MONTHLY_TRENDS": "Tendencias mensuales",
+    "TOTAL": "Total",
+    "MTD": "Mes actual",
+    "OFFER_POINTS": "Ofrecer puntos",
+    "SEE_HOSTORY": "Histórico",
+    "ALL_FIELD_REQUIRED": "Por favor complete todos los campos para continuar"
+  },
+  "SUBSCRIPTION_PART": {
+    "ARCHIVE_DOCS": "Archivar documentos",
+    "BLOG": "Blog",
+    "PRODUCT": "El precio",
+    "TRIAL": "Número de días de prueba",
+    "about-us": "Acerca de nosotros",
+    "address": "Dirección",
+    "already-account": "Ya tienes una cuenta",
+    "back": "Atrás",
+    "basic": "Básico",
+    "city": "Ciudad",
+    "congratulations": "Felicidades",
+    "contact-us": "Contáctanos",
+    "country": "País",
+    "customers": "Clientes",
+    "desc-res-war": "Por favor asegúrese de que el número sea exacto. Aún puede cambiar el número más tarde",
+    "enter-email": "Ingrese el correo electrónico",
+    "enter-password": "Ingrese su contraseña",
+    "enter-verification-email-address": "Por favor ingrese el código de verificación que hemos enviado a su correo electrónico",
+    "faq": "Preguntas frecuentes",
+    "finish": "Finalizar",
+    "finish-desc-page": "Le enviaremos el NFC en menos de una semana. Mientras tanto, puede definir su menú en su cuenta",
+    "gold": "Oro",
+    "how-many-restaurants": "¿Cuántos restaurantes tienes?",
+    "personal-info": "Información personal",
+    "company-info": "Información de la empresa",
+    "kanban": "Kanban",
+    "loves": "Me gusta",
+    "month-free-trial": "Meses de prueba gratis",
+    "name-company": "Nombre de la empresa",
+    "next": "Siguiente",
+    "orders": "Pedidos",
+    "oui": "Sí",
+    "payment": "Pago",
+    "platinum": "Platino",
+    "post-code": "Código postal",
+    "post-code-validation": "Por favor asegúrese que el código postal tenga un mínimo de 5 y un máximo de 6 dígitos.",
+    "privacy-policy": "Política de privacidad",
+    "promo": "Promoción",
+    "promotion": "Promoción",
+    "restaurant": "Restaurante",
+    "restaurants": "Restaurantes",
+    "select-package": "Seleccionar paquete",
+    "send-qr-code": "Le enviaremos el NFC",
+    "shipment-address": "Por favor ingrese la dirección de envío",
+    "shipping-detail": "Detalles del envío",
+    "sign-in": "Iniciar sesión",
+    "signup-different-account": "Verificar correo electrónico",
+    "submit": "Enviar",
+    "sylver": "Plata",
+    "terms-of-use": "Términos de uso",
+    "testimonial": "Testimonio",
+    "until": "Hasta",
+    "us-for-our-work": "Nosotros por nuestro trabajo",
+    "name_company": "Nombre de la empresa",
+    "name_company_placeholder": "Ingrese el nombre de su empresa",
+    "company_address": "Dirección de la empresa",
+    "company_address_placeholder": "Ingrese la dirección de su empresa",
+    "company_city": "Ciudad",
+    "company_city_placeholder": "Ingrese su ciudad",
+    "company_post_code": "Código postal",
+    "company_post_code_placeholder": "Ingrese su código postal",
+    "first_name": "Nombre",
+    "first_name_placeholder": "Ingrese su nombre",
+    "last_name": "Apellido",
+    "last_name_placeholder": "Ingrese su apellido",
+    "phone_number": "Número de teléfono",
+    "phone_number_placeholder": "Ingrese su número de teléfono",
+    "email": "Correo electrónico",
+    "email_placeholder": "Ingrese su correo electrónico",
+    "password": "Contraseña",
+    "password_placeholder": "Ingrese su contraseña",
+    "otp": "OTP",
+    "personal_information": "Información personal",
+    "company_information": "Información de la empresa",
+    "company_information_desc": "Por favor ingrese la información de su empresa",
+    "all_fields_required": "Todos los campos son requeridos",
+    "subscription_title": "Suscripción",
+    "enter_otp": "Por favor ingrese el OTP",
+    "select_plan": "Seleccionar plan",
+    "select_country": "Seleccionar país",
+    "congrats_title": "¡Felicidades!",
+    "congrats_message": "Su suscripción está ahora completa.",
+    "thank_you": "¡Gracias por unirse a nosotros!",
+    "summary_line": "Está todo listo para explorar la experiencia completa.",
+    "start_now": "Comenzar ahora",
+    "nfc_note": "Nota: Asegúrese de que esta dirección sea correcta — <b>Su etiqueta NFC se entregará a la dirección proporcionada.</b>",
+    "checkbox_text": "Al marcar la casilla, aceptas nuestros",
+    "checkbox_text_cont": "Revisa nuestra",
+    "checkbox_label": "Acepto los Términos de uso y la Política de privacidad"
+  },
+  "REWARD": {
+    "ADD_LEVEL": "Agregar nivel",
+    "LEVEL_NAME": "Nombre del nivel",
+    "LEVEL_POINTS": "Puntos del nivel",
+    "POINTS": "Puntos",
+    "SAVE": "Guardar",
+    "UPDATE": "Actualizar",
+    "CANCEL": "Cancelar",
+    "LEVEL_NOT_FOUND": "No se encontraron niveles",
+    "ENTRIES": "Entradas",
+    "ADD_REWARD": "Agregar recompensa",
+    "EDIT": "Editar",
+    "DELETE": "Eliminar",
+    "NO_REWARDS_FOUND": "No se encontraron recompensas",
+    "REWARD_NAME": "Agregar nombre de la recompensa",
+    "EDIT_REWARD": "Actualizar recompensa",
+    "DELETE_CONFIRMATION": "¿Estás seguro de querer eliminar?",
+    "REWARD_DELETED": "Recompensa eliminada correctamente",
+    "DELETE_ERROR": "Error al eliminar la recompensa",
+    "REWARD_CREATED": "Recompensa creada correctamente",
+    "REWARD_UPDATED": "Recompensa actualizada correctamente",
+    "SAVE_LEVEL_ERROR": "Error al guardar el nivel",
+    "LEVEL_UPDATED": "Nivel actualizado correctamente",
+    "LEVEL_CREATED": "Nivel creado correctamente",
+    "LEVEL_DELETED": "Nivel eliminado correctamente",
+    "IMAGE_UPLOAD_ERROR": "Algo salió mal. Por favor, inténtalo de nuevo en unos momentos.",
+    "PAGINATION": {
+      "SHOWING": "Affichage",
+      "OF": "sur",
+      "ENTRIES": "entrées",
+      "ITEMS_PER_PAGE": "Éléments par page"
+    },
+    "SING_REWARD": {
+      "TITLE": "Recompensas",
+      "SUBTITLE": "Selecciona una recompensa para ver su uso",
+      "SEARCH_PLACEHOLDER": "Buscar recompensa...",
+      "EMPTY_LIST": "No se encontraron recompensas",
+      "DETAILS_TITLE": "Detalles",
+      "DETAILS_EMPTY": "Selecciona una recompensa para ver los detalles",
+      "STATS": {
+        "CUSTOMERS": "Clientes",
+        "TOTAL_REWARDS": "Total de recompensas",
+        "POINTS_CONSUMED": "Puntos consumidos",
+        "LAST_ACTIVITY": "Última actividad",
+        "NONE": "Ninguna"
+      },
+      "TABLE": {
+        "CUSTOMER": "Cliente",
+        "EMAIL": "Correo",
+        "PHONE": "Teléfono",
+        "DOB": "Fecha de nacimiento",
+        "REWARDS": "Recompensas",
+        "LAST_REWARD": "Última recompensa",
+        "POINTS": "Puntos",
+        "SHOWING": "Mostrando {{shown}} de {{total}}"
+      },
+      "NO_USAGE": "No se encontró uso para esta recompensa",
+      "USED_TIMES_POINTS": "Utilisée {{count}} fois ({{points}} points)",
+      "LAST_TIME":"La última vez:"
+    }
+  },
+  "HOME": {
+    "LOYALTY": "Lealtad,",
+    "LOYALTY_MADE_EASY": " hecha fácil",
+    "FOR_YOU_AND_CUSTOMER": "Para ti y tu cliente",
+    "EASIEST_WAY_TO_GET_STARTED": " Lealtad sin fricción, por fin",
+    "WITHOUTCARD": "Sin tarjeta",
+    "WITHOUTSEIZER": " Sin tecleo",
+    "WITHOUTINTEGRATION": "Sin integración",
+    "RGPD": "RGPD",
+    "SANSAPP": "Sin aplicación",
+    "SUBSCRIPTION": "Estoy convencido",
+    "LEARN_MORE": "Aprender más",
+    "EXPLORE_SITTAP": "Más información",
+    "ASK_QST": "Haz una pregunta",
+    "HOW_IT_WORKS": "Lecy hace la lealtad ultra simple",
+    "SCAN_NFC_TITLE": "Escanear NFC",
+    "SCAN_NFC_DESC": "El cliente acerca su smartphone a la etiqueta NFC",
+    "OPEN_LINK_TITLE": "Abrir el enlace",
+    "OPEN_LINK_DESC": "El cliente simplemente abre el enlace que aparece",
+    "CONFIRM_TITLE": "Eso es todo",
+    "CONFIRM_DESC": "Se añade un punto. Cuando se alcanza el umbral, la recompensa está disponible",
+    "TECH_INNOVATION_HEADING": "Simplifica. Simplifica. Simplifica.",
+    "TECH_INNOVATION_SUBHEADING1": "Lecy funciona sin integración y sin esfuerzo, tanto para usted como para sus clientes. Detrás de esta simplicidad se encuentran nuestra tecnología de prueba de presencia NFC y autenticación móvil segura, conforme al RGPD.",
+    "TECH_INNOVATION_SUBHEADING2": "Sólo 2 minutos para configurarlo",
+    "TECH_INNOVATION_SUBHEADING3": "Sólo 2 segundos para ganar un punto",
+    "FOR_YOU_TITLE": "Para ti",
+    "FOR_YOU_POINT_1": "Listo para usar, sin necesidad de integración",
+    "FOR_YOU_POINT_2": "Total flexibilidad en las condiciones",
+    "FOR_YOU_POINT_3": "Sin aplicación ni entrada necesaria: lealtad silenciosa",
+    "FOR_CUSTOMERS_TITLE": "Para tus clientes",
+    "FOR_CUSTOMERS_DESC": "",
+    "FOR_CUSTOMERS_POINT_1": "Punto de lealtad añadido en 2 segundos",
+    "FOR_CUSTOMERS_POINT_2": "Sin aplicación, sin entrada... sin fricción",
+    "FOR_CUSTOMERS_POINT_3": "Totalmente compatible con GDPR",
+    "DISCOVER_DIGITAL_HEADING": "Elige una solución ultra simple que te ayude a construir relaciones más fuertes con tus clientes y aumentar tus ingresos.",
+    "BOOK_25MIN_DEMO": "Y eso no es todo — Lecy también te ayuda a ganar visibilidad y comunicarte mejor con tu audiencia.",
+    "BOOK_A_DEMO": "Reservar una demostración",
+    "SCROLL_TO_TOP": "Desplazarse arriba",
+    "PURCHASEBEGINNINGSHEADING": "Haz que cada compra sea un <br> comienzo, no un final",
+    "REVENUE_BOOST": "Impulso de ingresos",
+    "LOYALTYQUOTE": "Los programas de lealtad aumentan los ingresos entre un <b>15</b> y un <b>25%</b>,<br> aumentando la frecuencia de compra entre un <b>20</b> y un <b>30%</b><b><br><br>Revista de investigación de mercados",
+    "LOYALTYQUOTE_MOBILE": "Los programas de lealtad aumentan los ingresos entre un <b>15</b> y un <b>25%</b>, aumentando la frecuencia de compra entre un <b>20</b> y un <b>30%</b><b><br><br>Revista de investigación de mercados",
+    "TESTIMONIAL_TITLE": "Destácate con un programa de lealtad impecable",
+    "BUSINESS_TYPES": {
+      "BEAUTY_SALONS": "Salones de belleza",
+      "BUTCHER_SHOPS": "Carnicerías",
+      "BREWERIES": "Cervecerías",
+      "WINE_SHOPS": "Tiendas de vino",
+      "CHOCOLATE_SHOPS": "Tiendas de chocolate",
+      "FLORISTS": "Floristerías",
+      "BOOKSTORES": "Librerías",
+      "READY_TO_WEAR": "Prêt-à-porter",
+      "RESTAURANTS": "Restaurantes",
+      "HAIR_SALONS": "Salones de peluquería",
+      "CHEESE_SHOPS": "Tiendas de quesos",
+      "FITNESS_CLUB": "Clubes de fitness"
+    },
+    "SUB_TITLE": "Para todos los negocios físicos",
+    "BUILD_RELATIONSHIP": "Lecy: Fidelización sin complicaciones.<br> Mayor adopción. Mayor retención.",
+    "BUILD_RELATIONSHIP1": "Lecy: Fidelización sin complicaciones.<br> Mayor adopción. Mayor retención.",
+    "WITH_LECY_DESC": "La fidelización es su mejor retorno de la inversión, sin importar el tipo de negocio. Elija Lecy para ofrecer una experiencia al cliente sencilla y atractiva.",
+    "WITH_LECY_TIT": "Con Lecy",
+    "WITH_LECY_SUBTITLE": "Fácil y rápido",
+    "WITHOUT_LECY_TIT": "Sin Lecy",
+    "WITHOUT_LECY_SUBTITLE": "Demasiadas fricciones",
+    "FRICTION_INTEGRATION": "Integración con fricciones",
+    "APP_DOWNLOAD": "Descarga de la app",
+    "SUBSCRIPTION1": "Suscripción",
+    "LOGIN": "Iniciar sesión",
+    "CONTACT_US": "Contáctanos",
+    "CHECKOUT_SUBTITLE_TOP": "Make the most of every checkout interaction:",
+    "CHECKOUT_LIST": {
+      "ITEM1": "Fidélisation rapide",
+      "ITEM2": "Collecte d’avis Google simplifiée",
+      "ITEM3": "Communication fluide de vos actualités"
+    },
+    "CHECKOUT_SUBTITLE_BOTTOM": "Lecy becomes a powerful communication channel — without ever spamming your customers."
+  },
+  "NAVBAR": {
+    "DEMO": "Demo",
+    "HOW_IT_WORKS": "Por qué Lecy",
+    "BOOK_DEMO": "Reservar demostración",
+    "LOGIN": "Iniciar sesión",
+    "PRICING": "Precios",
+    "ABOUT_US": "Sobre nosotros",
+    "BLOG": "Blog",
+    "TERMS": "Términos y condiciones",
+    "PRIVACY": "Política de privacidad",
+    "FAQ": "Preguntas frecuentes",
+    "CONTACT": "Contacto",
+    "MORE": "Más",
+    "RESOURCES": "Recursos",
+    "SUBSCRIBE": "Suscribir"
+  },
+  "FOOTER": {
+    "PHONE": "+33 6 72 85 50 41",
+    "FOLLOW_US": "Síguenos",
+    "ALL_RIGHTS_RESERVED": "Todos los derechos reservados"
+  },
+  "CUSTOMER": {
+    "ALL": "Todo",
+    "LIKE": "Como",
+    "DISLIKE": "Aversión",
+    "DATE_OF_BIRTH": "Fecha de nacimiento",
+    "NUMBER_VISITS": "Número de visitas",
+    "FIRST_VISIT": "Primera visita",
+    "E_MAIL": "Correo electrónico",
+    "LAST_VISIT": "Última visita",
+    "NUMBER_OF_REWARDS": "Número de recompensas",
+    "PHONE": "Teléfono",
+    "POINTS": "Puntos",
+    "NAME": "Nombre",
+    "REWARDS": "Recompensas",
+    "POINT_DONE": "Puntos añadidos con éxito",
+    "HISTORY": "Historial del cliente",
+    "ADD_POINT": "Ofrecer puntos",
+    "ENTER_POINT": "Ingrese los puntos",
+    "EVENT": "Evento",
+    "SHOP": "Shop",
+    "DATE": "Fecha",
+    "REWARD": "Recompensa",
+    "VISIT": "Visita (+1)",
+    "KPIS": {
+      "TOTAL_REWARDS": "Recompensas",
+      "TOTAL_CUSTOMERS": "Miembros",
+      "TOTAL_VISITS": "Puntos otorgados",
+      "LOYAL_CUSTOMERS": "Miembros activos",
+      "COMEBACK_CUSTOMERS": "Miembros que regresan"
+    },
+    "TABS": {
+      "VISITS_REWARDS": "Visitas y Recompensas",
+      "CUSTOMER_SATISFACTION": "Satisfacción del Cliente",
+      "REWADRS": "Recompensas"
+    }
+  },
+  "SETTING": {
+    "POINT_EXP_PERIOD": "Período de expiración de puntos",
+    "MIN_POINT_ACQ": "Tiempo mínimo entre adquisiciones de puntos",
+    "GENERAL_SETTING": "Configuración general",
+    "DEFAULT_LANGUAGE": "Idioma predeterminado",
+    "UNITS": {
+      "DAYS": "días",
+      "HOURS": "horas"
+    }
+  },
+  "INFORMATION": {
+    "SUBSCRIPTION_INFORMATION": "Suscripción",
+    "EMAIL": "Correo electrónico"
+  },
+  "SIDEBAR": {
+    "CUSTOMERS": "Clientes",
+    "PROGRAM": "Programa",
+    "COMMUNICATION": "Comunicación",
+    "SHOPS": "Tiendas",
+    "ACCOUNT": "Mi Cuenta"
+  },
+  "WHY_US": {
+    "FIRST_SEC": {
+      "TITLE": "La solución más sencilla que existe",
+      "DESCRIPTION": "Lecy ofrece una forma nueva y ultra sencilla de fidelizar, comunicarse y crear un vínculo fuerte con sus clientes."
+    },
+    "SECOND_SEC": {
+      "FREQUENCY_OF_VISITS": "Frecuencia de visitas",
+      "EMOTIONAL_CONNECTION": "Conexión emocional",
+      "CUSTOMER_SATISFACTION": "Satisfacción del cliente",
+      "INCREACE_FREQ_VISITS_TITLE": "Aumentar la frecuencia de visitas",
+      "INCREACE_FREQ_VISITS_DESCRIPTION": "Un buen programa de lealtad anima a los clientes a regresar con más frecuencia, ya que saben que son recompensados por su fidelidad.",
+      "LOYALTY_REPORT_DESCRIPTION": "El 64 % de los miembros de programas de lealtad aumentan la frecuencia de sus compras.",
+      "LOYALTY_REPORT_YEAR": "Bond Loyalty Report 2022",
+      "LOYALTY_REPORT_2_DESCRIPTION": "Los clientes fieles gastan en promedio un 67 % más que los nuevos clientes.",
+      "LOYALTY_REPORT_2_YEAR": "Bain & Company",
+      "EXISTING_LOYALTY_PROGRAMS": "Los programas de lealtad existentes generan demasiada fricción",
+      "FOR_BUSINESS": "Para empresas",
+      "FOR_CUSTOMERS": "Para clientes",
+      "TABS_SEC_1": {
+        "WHY_LOYALTY_PROGRAM": "Por qué un programa de lealtad",
+        "WHY_LECY": "Por qué Lecy",
+        "TAB1": {
+          "SECTION1": {
+            "TITLE": "Frecuencia de visitas",
+            "DESCRIPTION": "Aumentar la frecuencia de visitas",
+            "STAT": "Un buen programa de lealtad anima a los clientes a regresar con más frecuencia, ya que saben que son recompensados por su fidelidad.",
+            "stats": [
+              {
+                "stat": "El 64 % de los miembros de programas de lealtad aumentan la frecuencia de sus compras.",
+                "source": "Bond Loyalty Report 2022"
+              },
+              {
+                "stat": "Los clientes fieles gastan en promedio un 67 % más que los nuevos clientes.",
+                "source": "Bain & Company"
+              }
+            ]
+          },
+          "SECTION2": {
+            "TITLE": "Conexión emocional",
+            "DESCRIPTION": "Crear una conexión emocional con tus clientes",
+            "STAT": "Ofrecer recompensas demuestra que valoras a tus clientes. Esto fortalece la imagen de la marca y crea una conexión emocional.",
+            "stats": [
+              {
+                "stat": "El 86 % de los consumidores dicen que la lealtad está influenciada por el apego emocional a una marca.",
+                "source": "Capgemini, \"Loyalty Deciphered – How Emotions Drive Genuine Engagement\""
+              },
+              {
+                "stat": "Los clientes emocionalmente conectados tienen 3 veces más probabilidades de recomendar la marca.",
+                "source": "Harvard Business Review"
+              }
+            ]
+          },
+          "SECTION3": {
+            "TITLE": "Satisfacción del cliente",
+            "DESCRIPTION": "Mejorar la satisfacción del cliente",
+            "STAT": "Un cliente que se siente reconocido y recompensado suele estar más satisfecho… y es más indulgente en caso de un problema.",
+            "stats": [
+              {
+                "stat": "El 79 % de los consumidores dicen que los programas de lealtad los hacen más propensos a seguir comprando con una marca.",
+                "source": "Bond Loyalty Report 2022"
+              },
+              {
+                "stat": "Un cliente satisfecho tiene 5 veces más probabilidades de volver a comprar, 4 veces más de recomendar y 7 veces más de perdonar un error.",
+                "source": "Temkin Group Customer Experience Study"
+              }
+            ]
+          }
+        },
+        "TAB2": {
+          "SECTION1": {
+            "TITLE": "Facilidad y rapidez",
+            "DESCRIPTION": "La solución más fácil y rápida",
+            "STAT": "Gracias a la tecnología de Lecy, que asegura el proceso de validación con enlaces efímeros, los clientes validan su paso en 2 segundos sin fricción: sin app que instalar, sin tarjeta que sellar y sin datos que introducir.",
+            "stats": [
+              {
+                "stat": "El 70 % de los consumidores abandonan un programa de lealtad que es demasiado complicado o restrictivo.",
+                "source": "Colloquy Loyalty Census"
+              },
+              {
+                "stat": "El 77 % de los usuarios consideran un programa más atractivo si no requiere registro ni aplicación.",
+                "source": "PwC Consumer Intelligence"
+              },
+              {
+                "stat": "Los recorridos de cliente \"sin fricción\" aumentan la satisfacción en +20 % en promedio.",
+                "source": "McKinsey & Company, \"The State of Customer Experience\""
+              }
+            ]
+          },
+          "SECTION2": {
+            "TITLE": "Lealtad, no cartera",
+            "DESCRIPTION": "Recompensar la lealtad, no la cartera",
+            "STAT": "Con Lecy, cada compra cuenta, sin importar el monto. Es un enfoque más humano y gratificante que valora la regularidad sin presión. El resultado: una relación de confianza que se fortalece con cada visita.",
+            "stats": [
+              {
+                "stat": "El 65 % de los consumidores prefieren recompensas basadas en la frecuencia en lugar de en el monto gastado.",
+                "source": "Bond Brand Loyalty"
+              },
+              {
+                "stat": "Los sistemas basados en la regularidad generan un 40 % más de interacciones que aquellos basados en el gasto.",
+                "source": "Yotpo Loyalty Trends Report"
+              },
+              {
+                "stat": "Los clientes regulares tienen 4 veces más probabilidades de convertirse en embajadores que aquellos que compran esporádicamente pero gastan mucho.",
+                "source": "Harvard Business Review"
+              }
+            ]
+          },
+          "SECTION3": {
+            "TITLE": "Simplicidad",
+            "DESCRIPTION": "Una solución flexible y fácil de implementar",
+            "STAT": "No se necesita un POS conectado ni integraciones. Lecy funciona de manera autónoma con un sistema ligero que puede configurarse en 2 minutos: solo hay que definir las condiciones y la recompensa.",
+            "stats": [
+              {
+                "stat": "El 60 % de los comerciantes no activan un programa de lealtad debido al tiempo, la complejidad técnica o los costos.",
+                "source": "Retail Dive"
+              },
+              {
+                "stat": "Las soluciones sin integración tienen 3 veces más probabilidades de implementarse dentro de los 30 días posteriores a la decisión.",
+                "source": "Forrester Research"
+              },
+              {
+                "stat": "Una configuración rápida (<5 minutos) aumenta en un 50 % las probabilidades de que el programa sea probado y mantenido.",
+                "source": "Shopify Merchant Survey"
+              }
+            ]
+          }
+        }
+      },
+      "TABS_SEC_2": {
+        "TAB1": [
+          {
+            "TITLE": "Descarga de app",
+            "DESCRIPTION": "Los clientes necesitan instalar otra aplicación más solo para unirse."
+          },
+          {
+            "TITLE": "Proceso de registro",
+            "DESCRIPTION": "Los registros largos desalientan la participación."
+          },
+          {
+            "TITLE": "Inicio de sesión",
+            "DESCRIPTION": "Las contraseñas e inicios de sesión crean fricciones innecesarias."
+          }
+        ],
+        "TAB2": [
+          {
+            "TITLE": "Descarga de app",
+            "DESCRIPTION": "Los clientes necesitan instalar otra aplicación más solo para unirse."
+          },
+          {
+            "TITLE": "Proceso de registro",
+            "DESCRIPTION": "Los registros largos desalientan la participación."
+          },
+          {
+            "TITLE": "Inicio de sesión",
+            "DESCRIPTION": "Las contraseñas e inicios de sesión crean fricciones innecesarias."
+          },
+          {
+            "TITLE": "Tarjetas de cartera",
+            "DESCRIPTION": "Las tarjetas físicas son fáciles de perder y ocupan espacio."
+          }
+        ]
+      }
+    },
+    "THIRD_SEC": {
+      "NO_CARDS": "Establezca su programa",
+      "NO_INTEGRATION": "Incluye tu enlace de Google y noticias",
+      "NO_TYPING": "Coloque el NFC",
+      "NO_SUBSCRIBE_PROCESS": "Autenticación mediante smartphone sin registro",
+      "NO_LOGIN": "Adición automática de puntos",
+      "NO_WALLET_CARD": "Sin tarjetas de cartera",
+      "DESC": "Simplemente sostenga su teléfono inteligente cerca del NFC",
+      "TRANSFORM_MY_BUSINESS": "Transformar mi negocio",
+      "FOR_BUSINESS": "Para empresas",
+      "FOR_CUSTOMERS": "Para clientes",
+      "LECY_IS_A_FRICTIONLESS_SOLUTION": "Lecy es una solución sin fricciones",
+      "TWO_MINUTES_TO_DEPLOY": "Dos minutos para implementar",
+      "TWO_MINUTES_TO_GET_POINT": "Dos segundos para obtener un punto",
+      "INDICATE_NUMBER_OF_POINTS": "Indica el número de puntos</br> requeridos para cada recompensa",
+      "PUT_NFC_TAG_NEAR_POS": "Coloca la etiqueta NFC cerca de la caja",
+      "LOYALTY_POINTS": "Puntos de lealtad",
+      "LOYALTY_POINTS_DESC": "Rastrea fácilmente las recompensas y mantiene a los clientes motivados para volver.",
+      "ENGAGING_COMMUNICATION": "Comunicación atractiva",
+      "ENGAGING_COMMUNICATION_DESC": "Mensajes simples animan a los clientes a compartir sus opiniones.",
+      "GOOGLE_REVIEW": "Redirección a Google Review",
+      "GOOGLE_REVIEW_DESC": "Mejora tu reputación online guiando a los clientes satisfechos a dejar reseñas.",
+      "PRIVATE_FEEDBACK": "Retroalimentación privada",
+      "PRIVATE_FEEDBACK_DESC": "Recibe comentarios directamente para mejoras rápidas y relaciones más sólidas.",
+      "ANNOUNCEMENTS": "Anuncios",
+      "ANNOUNCEMENTS_DESC": "Mantén a los clientes informados con las últimas noticias y promociones.",
+      "SOCIAL_MEDIA": "Redes sociales",
+      "SOCIAL_MEDIA_DESC": "Lleva a los clientes a tus redes sociales y aumenta el compromiso.",
+      "A_POWERFUL_WAY_TO_COMMUNICATE": "Una forma poderosa de comunicarse</br> con los clientes",
+      "A_POWERFUL_WAY_TO_COMMUNICATE_DESC": "Involucra a tus clientes mediante una comunicación de lealtad significativa."
+    }
+  },
+  "BLOGS": {
+    "TITLE": "El blog que guía tus decisiones",
+    "SUBTITLE": "Des explications claires, des conseils concrets, et des exemples pour tout comprendre sans jargon",
+    "SECTIONS": [
+      {
+        "TITLE": "Por qué la lealtad del cliente merece algo mejor que una tarjeta de papel",
+        "CONTENT": "<p>Aún las ves por todas partes. Lamentablemente, la tarjeta de lealtad de papel — la que se sella en cada visita — sigue presente. Se pierde en billeteras, se olvida en bolsos, se queda en cajones. Pero seamos honestos: en 2025, es una herramienta del pasado.</p><p><strong>La lealtad a la antigua no tiene lugar en el mundo actual</strong></p><p>Hoy, tus clientes tienen docenas de tarjetas de lealtad. ¿El resultado? Casi nunca tienen la correcta en el momento adecuado. Imagina esto: un cliente fiel pasa frente a tu tienda, duda… pero recuerda que dejó su tarjeta en casa. Eso puede ser una venta perdida — aunque tenga su smartphone en el bolsillo.</p><p>Con Lecy, no necesitas tarjeta, app, cuenta ni formulario. El cliente entra, su presencia se verifica y reconoce instantáneamente. Vuelve, y es recompensado. Sin tecleo, sin fricción. Así de simple.</p><p><strong>Cero fricción, 100% eficiencia</strong></p><p>Las tarjetas de papel dan la ilusión de lealtad. En realidad, hacen imposible rastrear nada. ¿Quién regresa? ¿Con qué frecuencia? ¿Cuándo? ¿Qué piensa de tu negocio? No tienes datos.</p><p>Con Lecy, cada visita cuenta. Puedes rastrear el tráfico real, identificar a tus clientes más fieles y medir el impacto de tus acciones — todo sin pedir nada a tus clientes.</p><p><strong>Tus clientes esperan más — y tú también deberías</strong></p><p>Las tarjetas de papel envían un mensaje anticuado. En un mundo donde todo se decide en segundos, hacen que tu negocio parezca estancado en el pasado. Peor aún, muestran desconexión con las expectativas actuales: simplicidad, rapidez e inteligencia.</p><p><strong>Lecy: discreto, pero increíblemente poderoso</strong></p><p>Lo que hace único a Lecy es su simplicidad y discreción.</p><p>Una etiqueta NFC innovadora que confirma instantáneamente una visita en el punto de venta, combinada con identificación por huella digital respetuosa con la privacidad y totalmente compatible con GDPR — eso es todo.</p><p>Sin app para descargar, sin cuenta para crear, sin formularios ni complicaciones. La lealtad se activa en segundos — fácil, rápido y fluido.</p><p>Para ti, es una obviedad.</p><p>Y Lecy va mucho más allá de solo rastrear visitas:</p><ul><li>Fomenta reseñas en Google justo después de recompensar al cliente</li><li>Recoge comentarios anónimos para mejorar tu servicio</li><li>Lanza campañas dirigidas según frecuencia o comportamiento</li><li>Promociona tu presencia en redes sociales con cada interacción</li><li>Comparte tus últimas noticias sin repetir el mismo mensaje a cada cliente</li></ul><p>Con Lecy, la lealtad se convierte en un motor poderoso de compromiso y visibilidad del cliente, sin afectar la experiencia.</p><p><strong>En resumen: lealtad que va más allá de la lealtad.</strong></p><p><strong>Conclusión</strong></p><p>La tarjeta de papel pertenece al pasado. Tus clientes han evolucionado. El mundo ha avanzado. Es hora de que la lealtad también lo haga.</p><p>Lecy es la primera solución de lealtad sin app, sin cuenta, sin tecleo, sin integración... sin fricción.</p><p><strong>El futuro de la lealtad está aquí</strong></p>"
+      },
+      {
+        "TITLE": "Lealtad, sin integración: Sí, es posible (gracias a Lecy)",
+        "CONTENT": "<p>Los programas de lealtad digitales suelen requerir una integración compleja con el sistema punto de venta (POS), suponiendo que tengas un POS basado en la nube y que la solución elegida sea compatible. En resumen: no es tan sencillo.</p><p><strong>1. ¿Tienes un POS basado en la nube compatible? Genial, pero…</strong></p><p>Incluso con un sistema moderno, la lealtad puede convertirse rápidamente en un dolor de cabeza. Tal vez tu software no te permita configurar las condiciones de recompensa que realmente quieres ofrecer. Cada integración consume tiempo, es costosa y a menudo frágil — una actualización puede romper todo.</p><p>Y para tus clientes, rara vez es fluido: les piden descargar una app, crear una cuenta, ingresar un código, escanear un código QR… Seamos honestos: ni tus clientes más fieles tienen tiempo — o motivación — para todo eso.</p><p><strong>2. ¿No tienes un POS en la nube? No hay problema.</strong></p><p>Tu sistema puede ser local, anticuado o simplemente incompatible con soluciones modernas. En ese caso, generalmente tienes dos opciones:</p><ul><li>Una tarjeta de papel para marcar, directamente del siglo XX — poco práctica, fácil de olvidar e ineficaz.</li><li>O un sistema de lealtad donde tienes que ingresar manualmente los datos del cliente en cada visita. Es lento, tedioso y desmotiva a todos.</li></ul><p>Con Lecy, olvida todo eso. Simplemente colocas una pequeña etiqueta NFC junto a tu caja registradora. Sin cableado, sin cambios en el sistema, cero integración técnica. El cliente toca su smartphone en la etiqueta NFC y su presencia se verifica instantáneamente: es reconocido, recompensado — en menos de 2 segundos.</p><p><strong>Elige Lecy: sin integración, sin app, sin fricción.</strong></p><p>Lecy está en funcionamiento en minutos, sin impacto en tu sistema actual. Sin interfaz que desarrollar, sin dependencias técnicas, sin necesidad de entrenamiento.</p><p>¿Y para tus clientes? Sin app, sin cuenta, sin tecleo. Solo un gesto simple.</p><p>Es el programa de lealtad más fácil de instalar y el más natural de usar.</p>"
+      },
+      {
+        "TITLE": "5 razones por las que tus clientes no se unen a tu programa de lealtad (y cómo solucionarlo)",
+        "CONTENT": "<p>Has implementado un programa de lealtad. Ofreces recompensas atractivas. Y aun así... muy pocos clientes realmente participan. No es que no les guste tu negocio — a menudo el sistema no está alineado con sus expectativas actuales.</p><p>Aquí están los 5 obstáculos más comunes — y cómo Lecy los elimina elegantemente.</p><hr><p><strong>1. Olvidan su tarjeta (otra vez)</strong></p><p><strong>El problema:</strong><br>Las tarjetas de papel son fáciles de perder, olvidar o tirar. Y con tantos programas por ahí, la tuya suele acabar en un cajón... o en la basura.</p><p><strong>La solución:</strong><br>Con Lecy, no se necesita tarjeta. El cliente es reconocido automáticamente mediante una etiqueta NFC y una huella digital, sin nada que llevar o escanear. Solo un gesto simple.</p><hr><p><strong>2. No quieren descargar otra app más</strong></p><p><strong>El problema:</strong><br>A nadie le gusta rellenar formularios, crear una cuenta o liberar espacio en su teléfono para una app que usarán poco.</p><p><strong>La solución:</strong><br>Lecy funciona sin app. Sin descargas, sin registro. Tus clientes pueden empezar a disfrutar de los beneficios desde su primera visita.</p><hr><p><strong>3. No quieren perder tiempo en el pago</strong></p><p><strong>El problema:</strong><br>Un sistema de lealtad que ralentiza el pago es frustrante tanto para el personal como para los clientes. Teclear un número, escanear un código QR, ingresar credenciales, mostrar una tarjeta... todo interrumpe el flujo.</p><p><strong>La solución:</strong><br>Con Lecy, los registros de clientes son autónomos, seguros y toman solo 2 segundos, sin acción requerida de tu parte. Cero fricción, cero esperas.</p><hr><p><strong>4. No ven el beneficio</strong></p><p><strong>El problema:</strong><br>Si los clientes no entienden claramente lo que obtienen — o nunca se sienten recompensados — simplemente no participan.</p><p><strong>La solución:</strong><br>Lecy te permite recompensar cada visita de forma clara y que se adapte a tu negocio. Tú defines las reglas. Tú personalizas las ofertas. Todo sin tener que modificar tu sistema POS.</p><hr><p><strong>5. Quieren más que una tarjeta — quieren una relación real</strong></p><p><strong>El problema:</strong><br>Los clientes de hoy esperan más que sellos en una tarjeta. Quieren reconocimiento, conexión, recomendaciones e incluso la posibilidad de dar feedback.</p><p><strong>La solución:</strong><br>Lecy va mucho más allá del seguimiento de visitas:</p><ul><li>Fomenta reseñas en Google</li><li>Recoge feedback anónimo</li><li>Promociona tus redes sociales</li><li>Te permite anunciar nuevas ofertas en el momento adecuado</li><li>Y si optan por ello, los clientes pueden recibir actualizaciones por email</li></ul><hr><p><strong>En resumen</strong></p><p>Tus clientes no rechazan la lealtad. Rechazan sistemas torpes, lentos, olvidables o ineficaces.</p><p><strong>Lecy elimina todas las barreras con una solución que no requiere tarjeta, app, tecleo ni integración.</strong></p><p>Discreto, sencillo y rápido para tus clientes. Potente, autónomo y eficaz para tu negocio.</p><p><strong>¿Y si la lealtad finalmente fuera simple?</strong></p>"
+      },
+      {
+        "TITLE": "Un punto de lealtad — y mucho más: cómo construir conexión, visibilidad… y ingresos",
+        "CONTENT": "<p>Elige una solución ultra simple que te ayude a construir una conexión con tus clientes y aumentar tus ingresos. Esa es la promesa de Lecy — pero detrás de su simplicidad hay un potencial mucho más poderoso de lo que parece.</p><p>Un punto de lealtad es genial. Pero cuando se convierte en un detonante para el compromiso, la visibilidad y la comunicación, se vuelve aún más valioso. Y sobre todo, extremadamente rentable.</p><hr><p><strong>Un punto de lealtad = un contacto valioso</strong></p><p>Cuando otorgas un punto de lealtad con Lecy, no solo registras una visita. Creas un momento natural y sin esfuerzo de contacto, justo cuando el cliente está más receptivo — justo después de ganar una recompensa.</p><p>Es el momento perfecto para:</p><hr><p><strong>1. Pedir una reseña en Google</strong></p><p><strong>Las reseñas en Google se han convertido en uno de los motores más poderosos de visibilidad local.</strong><br>Pero pedir una reseña inesperadamente puede parecer agresivo.</p><p>Con Lecy, el enfoque es suave: el cliente acaba de ganar un punto de lealtad — lo agradeces y lo invitas amablemente a dejar una reseña (si quiere). Simple, natural, efectivo — y funciona.</p><hr><p><strong>2. Recoger feedback valioso (sin pasar por Google)</strong></p><p><strong>¿Y si el cliente no estuviera completamente satisfecho?</strong><br>No hay problema. Lecy les da una alternativa: dejar comentarios privados y anónimos directamente para ti.</p><p>¿Un comentario, una idea, una sugerencia constructiva? Obtienes información valiosa para mejorar — sin exposición pública.</p><hr><p><strong>3. Destacar tus redes sociales (y ganar seguidores)</strong></p><p><strong>¿Quieres aumentar tu presencia online?</strong><br>Después de otorgar un punto, Lecy te permite sugerir suavemente una acción, como seguir tu cuenta de Instagram o darle 'me gusta' a tu página de Facebook.</p><p>Sin presión — solo una oportunidad oportuna para convertir un cliente en seguidor.</p><hr><p><strong>4. Compartir noticias discretamente (sin repetirte)</strong></p><p><strong>¿Lanzando una nueva oferta? ¿Haciendo una promoción? ¿Destacando a tu equipo? ¿Cambiando horarios? ¿Organizando un evento?</strong><br>Lecy te ayuda a compartir tus actualizaciones — sin saturar. Sin carteles, sin volantes, sin repetir lo mismo a cada cliente.</p><p>Un pequeño mensaje discreto es todo lo que se necesita.</p><hr><p><strong>En resumen: un punto de lealtad es mucho más</strong></p><p>Con Lecy, cada punto de lealtad se convierte en una puerta hacia una relación más profunda:</p><ul><li>Más satisfacción</li><li>Más feedback</li><li>Más visibilidad</li><li>Más comunicación</li><li>Más clientes que regresan… y que también hablan de ti</li></ul><p>Así es la nueva lealtad: discreta, poderosa y sencilla.</p>"
+      },
+      {
+        "TITLE": "Por qué los programas de lealtad son esenciales (y cómo hacerlos realmente efectivos)",
+        "CONTENT": "<p>En un mundo donde los consumidores son constantemente solicitados, retener un cliente cuesta de 5 a 7 veces menos que adquirir uno nuevo (Harvard Business Review). Por eso, los programas de lealtad se han convertido en una estrategia indispensable para los comerciantes que quieren construir un negocio sostenible. Pero para funcionar, deben ser accesibles, simples y efectivos — y ahí es donde a menudo se complican las cosas.</p><hr><p><strong>📊 Lo que dicen las investigaciones sobre la lealtad</strong></p><p>Muchos estudios confirman el impacto positivo de los programas de lealtad en el comportamiento del cliente:</p><ul><li>Según el Informe Bond Loyalty, el 79% de los consumidores dice que un programa de lealtad los motiva a seguir comprando en una marca.</li><li>Accenture reporta que más del 70% de los clientes son más propensos a recomendar una marca con un buen programa de lealtad.</li><li>McKinsey encontró que las empresas con programas de lealtad bien diseñados ven aumentar sus ingresos hasta en un 15%.</li></ul><p>En resumen, la lealtad es una herramienta estratégica y rentable. Pero la clave está en cómo se ofrece la experiencia.</p><hr><p><strong>🚧 El problema: los programas de lealtad suelen ser demasiado complicados</strong></p><p>Para las tiendas locales y minoristas independientes, implementar un programa de lealtad suele encontrarse con mucha fricción:</p><ul><li>Una tarjeta perforada de papel que los clientes olvidan o pierden.</li><li>Una app móvil para descargar, que requiere cuenta y contraseña.</li><li>Formularios que llenar, códigos QR que escanear y entradas manuales en cada pago.</li><li>Integraciones complejas con POS, y si tu POS no está basado en la nube, las alternativas son demasiado dolorosas.</li></ul><p>¿El resultado? El programa está activo… pero los clientes no lo usan. Y la promesa de lealtad queda incumplida. Demasiados pasos. Mucha fricción. Mucho tiempo perdido. Lo que significa: no hay lealtad, no hay datos, no hay retorno de inversión.</p><hr><p><strong>✅ La solución: Lecy — lealtad sin fricción</strong></p><p>Aquí es donde Lecy realmente cambia las reglas. Con Lecy, la lealtad se vuelve ultra fluida, rápida y sin esfuerzo — tanto para el cliente como para el propietario del negocio.</p><ul><li>Sin app para instalar</li><li>Sin tarjeta para llevar</li><li>Sin cuenta para crear</li><li>Sin formularios ni pasos técnicos</li><li>Sin necesidad de integración con POS</li></ul><p>El cliente simplemente toca su smartphone en una pequeña etiqueta NFC, abre el enlace, y eso es todo — se otorga el punto. 2 segundos. Sin esfuerzo.</p><hr><p><strong>🎯 El resultado: todos los beneficios de la lealtad, sin sus desventajas</strong></p><p>Con Lecy, desbloqueas todos los beneficios clave de un programa de lealtad moderno y de alto rendimiento:</p><ul><li>Más clientes que regresan</li><li>Mejor diferenciación frente a la competencia</li><li>Interacciones más significativas (feedback, redes sociales, comunicación)</li></ul><p>Y lo haces todo sin añadir complejidad — ni para tus clientes ni para tu equipo.</p><hr><p><strong>En conclusión</strong></p><p>Los programas de lealtad son una palanca probada de crecimiento. Pero solo entregan resultados cuando son fáciles de usar. Lecy ofrece la versión más moderna de la lealtad: sin fricción, sin complejidad, sin tiempo perdido. Una experiencia de lealtad más fluida, más humana… y mucho más rentable.</p>"
+      },
+      {
+        "TITLE": "NFC: Simple, accesible y en el corazón de la innovación de Lecy",
+        "CONTENT": "<p>NFC (Comunicación de Campo Cercano) ya forma parte de nuestra vida diaria: pagos sin contacto, transporte público, credenciales de acceso, tarjetas bancarias… Y la buena noticia es que la gran mayoría de los smartphones modernos cuentan con esta tecnología. No se necesitan dispositivos futuristas ni de gama alta.</p><p>Hoy en día, más del 80% de los smartphones vendidos en Europa vienen con NFC activado por defecto, y según GSMA (la asociación global de operadores móviles), más del 95% de los usuarios de smartphones en Francia tenían un dispositivo compatible con NFC en 2024.</p><hr><p><strong>✅ Por qué NFC es más simple que un código QR</strong></p><p>Usar un código QR a menudo requiere:</p><ul><li>Abrir la cámara</li><li>Alinear correctamente</li><li>Esperar a que se detecte</li><li>Tener una conexión estable a Internet</li></ul><p>En contraste, NFC es más rápido, fluido y discreto:</p><ul><li>Sin escaneo</li><li>Sin alineación</li><li>Sin esperas</li></ul><p>Solo acerca el smartphone a la etiqueta y la acción se activa al instante. Es una experiencia casi invisible que no interrumpe el pago y mejora el recorrido del cliente.</p><hr><p><strong>🔒 Lecy convierte NFC en una verdadera innovación IoT</strong></p><p>En Lecy, hemos transformado NFC en una herramienta inteligente para la verificación de presencia. Cada etiqueta genera un enlace temporal y seguro, que verifica un evento de pago en un momento preciso, gracias a un algoritmo personalizado que previene fraudes o usos indebidos.</p><p>El resultado:</p><ul><li>El pago se verifica automáticamente, sin necesidad de introducir datos</li><li>Es imposible activar la etiqueta remotamente</li><li>Solo se puede ganar un punto por visita, aunque el proceso sea completamente autónomo</li></ul><p>Esta es una tecnología IoT inteligente, diseñada para la lealtad y la experiencia del cliente — sin lagunas ni abusos.</p><hr><p><strong>🔐 Privacidad ante todo y cumplimiento GDPR</strong></p><p>Lecy ha sido construido desde cero para respetar la privacidad del usuario:</p><ul><li>No se recopilan datos personales por defecto</li><li>No se requiere registro</li><li>No se almacenan datos personales sin el consentimiento explícito del usuario</li></ul><p>Y si un cliente quiere acceder a funciones adicionales (como seguimiento de puntos o comunicaciones personalizadas), puede elegir proporcionar sus datos libremente.</p><p>Lecy cumple totalmente con GDPR, tanto técnica como legalmente.</p><hr><p><strong>En resumen</strong></p><p>NFC ya está en los bolsillos de tus clientes. Más rápido que un código QR, más fluido que una tarjeta perforada y más simple que una app — con Lecy, se convierte en un motor poderoso de lealtad conectada e inteligente.</p><p>El uso que hace Lecy de NFC va mucho más allá de lo básico: es un sistema innovador de prueba de presencia, potenciado por tecnología IoT segura, inteligente y ética, diseñado para comerciantes y respetuoso con sus clientes.</p>"
+      },
+      {
+        "TITLE": "Por qué las apps de lealtad ya no funcionan (y qué las reemplaza)",
+        "CONTENT": "<p>Durante años, las apps móviles fueron vistas como la solución milagrosa para la lealtad del cliente. Pero hoy, la realidad es muy distinta:</p><p><strong>👉 La mayoría de las apps de lealtad se usan poco, se olvidan rápido o se eliminan por completo.</strong></p><p>Entonces, la pregunta es: ¿por qué ya no funcionan? Y más importante, ¿cuál es la alternativa más inteligente?</p><hr><p><strong>📉 1. Demasiadas apps, poco espacio (o interés)</strong></p><p>Tus clientes están saturados de apps. Ya tienen apps para su banco, compras, trabajo, entretenimiento... Descargar otra más — solo para una tienda que visitan ocasionalmente — no tiene sentido para ellos. Y aunque la descarguen, normalmente:</p><ul><li>La usan una o dos veces</li><li>Ocupa espacio en el teléfono</li><li>Requiere actualizaciones frecuentes</li><li>Terminan eliminándola</li></ul><p>Resultado: una solución costosa para ti... e invisible para ellos.</p><hr><p><strong>⏱️ 2. Demasiadas barreras de entrada</strong></p><p>Crear cuenta, elegir contraseña, confirmar por email, aceptar términos y condiciones... Para cuando hacen todo eso, tu cliente ya se rindió.</p><p>La lealtad nunca debería empezar con una tarea pesada. Debe ser fluida, natural y, sobre todo, instantánea.</p><hr><p><strong>📉 3. Una imagen obsoleta de innovación</strong></p><p>En su momento, tener tu propia app parecía moderno. Hoy, puede sentirse como un sistema torpe y anticuado.</p><p>En un mundo donde los gestos son simples y las interacciones fluidas, la app de lealtad simplemente no encaja.</p><hr><p><strong>✅ Lo que las reemplaza: lealtad sin fricción para el mundo real</strong></p><p>Lo que los clientes esperan hoy:</p><ul><li>Sin app que instalar</li><li>Reconocimiento instantáneo</li><li>Recompensas sin esfuerzo</li><li>La libertad de mantenerse anónimos</li></ul><p>Y eso es exactamente lo que ofrece Lecy.</p><hr><p><strong>🚀 Lecy: la nueva generación de lealtad</strong></p><p>Lecy usa una simple etiqueta NFC, colocada junto a tu caja. El cliente toca su smartphone, se abre un enlace seguro y recibe su punto de lealtad en solo 2 segundos. Sin descargas, sin cuentas, sin fricción.</p><p>Y aún mejor:</p><ul><li>El pago se verifica automáticamente</li><li>Solo se otorga un punto por visita (no se puede hacer trampa)</li><li>No se recopilan datos personales sin consentimiento</li><li>Lecy cumple al 100% con GDPR</li></ul><hr><p><strong>💡 En conclusión</strong></p><p>No es que a tus clientes no les guste la lealtad — solo que no les gusta cuando es complicada.</p><p>Las apps de lealtad tuvieron su momento. Pero hoy, generan más fricción que compromiso. La lealtad está evolucionando — y Lecy es la prueba. Simple. Instantánea. Sin app. Cumple con GDPR. Sin tecleo. La lealtad, finalmente alineada con lo que tus clientes realmente quieren.</p>"
+      }
+    ]
+  },
+  "FAQ": {
+    "GET_INTOUCH": "¿Tienes alguna pregunta? Tenemos respuestas.",
+    "GET_INTOUCH_SUBTITLE": "Todo lo que necesitas saber, claro y directo.",
+    "GET_STARTED": "Comenzar",
+    "ANY_QUESTIONS": "¿Tienes alguna pregunta?",
+    "QST": {
+      "WHAT_IS_LECY": {
+        "question": "¿Qué es Lecy?",
+        "answer": "Lecy es una solución inteligente y sin fricción para la lealtad — sin app, sin tarjeta, sin ingreso de datos y sin integración técnica. Se basa en una simple etiqueta NFC colocada junto a tu caja. Los clientes ganan sus puntos de lealtad en solo 2 segundos, sin esfuerzo."
+      },
+      "WHY_NOT_USE_APP": {
+        "question": "¿Por qué no usar una app de lealtad tradicional como todos los demás?",
+        "answer": "Porque las apps ya no se adaptan al comportamiento actual de las personas:\n\n- Tus clientes ya están saturados de apps\n- La mayoría no crea una cuenta solo para un programa de lealtad\n- Estas apps se usan poco y a menudo se eliminan\n- Configurarlas es costoso y complejo\n\nLecy es la alternativa moderna: sin descargas, sin registros — solo un gesto rápido y suave."
+      },
+      "HOW_DOES_NFC_WORK": {
+        "question": "¿Cómo funciona NFC con Lecy?",
+        "answer": "El NFC de Lecy no es solo NFC estándar. El cliente simplemente acerca su smartphone a la etiqueta NFC colocada junto a tu caja. Se abre automáticamente un enlace temporal y seguro, que prueba la visita y otorga el punto de lealtad — sin pasos manuales.\n\nMás del 95% de los usuarios de smartphones en Francia tienen un dispositivo compatible con NFC (fuente: GSMA 2024)."
+      },
+      "CAN_CUSTOMERS_CHEAT": {
+        "question": "¿Pueden los clientes hacer trampa y escanear varias veces?",
+        "answer": "No. Cada etiqueta Lecy genera un enlace único, cifrado y temporal válido para una sola visita — incluso si se escanea varias veces. Nuestro algoritmo personalizado previene cualquier tipo de fraude y solo se puede otorgar un punto por visita."
+      },
+      "DO_I_NEED_POS_INTEGRATION": {
+        "question": "¿Necesito conectar Lecy a mi sistema POS?",
+        "answer": "No. Lecy funciona completamente independiente de tu sistema punto de venta. Sin integración, sin desarrollo, sin problemas de compatibilidad. Solo coloca la etiqueta junto a tu caja… y listo."
+      },
+      "DOES_LECY_COLLECT_DATA": {
+        "question": "¿Lecy recopila datos personales?",
+        "answer": "Por defecto, Lecy no recopila datos personales. Sin registro, sin nombre, sin correo electrónico. El cliente permanece totalmente anónimo, a menos que elija voluntariamente compartir su información para acceder a funciones adicionales (seguimiento de puntos, comunicaciones, etc.)."
+      },
+      "IS_LECY_GDPR_COMPLIANT": {
+        "question": "¿Lecy cumple con GDPR?",
+        "answer": "Sí — Lecy cumple al 100% con GDPR, tanto técnica como legalmente. Para reconocer usuarios, Lecy usa un identificador técnico de dispositivo, el mismo tipo de datos que usan miles de empresas para optimizar el rendimiento o prevenir fraudes. Lecy lo usa solo para simplificar la experiencia del cliente y rastrear puntos — nunca para reventa o uso externo.\n\nLa privacidad del usuario está en el centro de todo lo que hacemos."
+      },
+      "WHAT_FEATURES_BESIDES_LOYALTY": {
+        "question": "¿Qué funciones ofrece Lecy además de la lealtad?",
+        "answer": "Lecy hace más que otorgar puntos. También puedes:\n\n- Fomentar reseñas en Google\n- Recoger feedback anónimo\n- Promocionar tus páginas en redes sociales\n- Compartir noticias y actualizaciones sin repetirlas en la caja\n- Construir relaciones reales y significativas con tus clientes — sin esfuerzo"
+      },
+      "HOW_LONG_TO_SET_UP": {
+        "question": "¿Cuánto tiempo tarda en configurarse Lecy?",
+        "answer": "Menos de 5 minutos. Sin cables, sin entrenamiento, sin complejidad. Simplemente defines cuántos puntos se necesitan para cada recompensa en tu panel Lecy. Luego colocas la etiqueta NFC proporcionada junto a tu caja… y comienzas de inmediato."
+      },
+      "WHEN_UNLOCK_REWARD_POINTS_DEDUCTED": {
+        "question": "Cuando desbloqueo una recompensa, ¿se descuentan mis puntos?",
+        "answer": "Sí. El comerciante establece la cantidad de puntos necesaria para cada recompensa o regalo y también puede fijar un período de validez (por ejemplo, 3 meses). Pasado este tiempo, los puntos no utilizados caducarán automáticamente."
+      },
+      "CAN_EARN_MULTIPLE_POINTS_SAME_DAY": {
+        "question": "¿Puedo ganar varios puntos en el mismo día?",
+        "answer": "Depende de la configuración. El comerciante define un tiempo mínimo entre dos obtenciones de puntos (por ejemplo, 6 horas). Si vuelves a escanear antes de que pase ese tiempo, no se añadirá ningún punto nuevo."
+      },
+      "CAN_EARN_POINT_SAME_TABLE": {
+        "question": "¿Todas las personas en la misma mesa pueden ganar un punto?",
+        "answer": "Sí. Si el restaurante coloca una etiqueta (tag) en la mesa y lo permite, cada persona que haya consumido podrá escanear y obtener un punto en su propia cuenta."
+      },
+      "AMOUNT_SPENT_INFLUENCE_POINTS": {
+        "question": "¿El monto gastado influye en la cantidad de puntos que gano?",
+        "answer": "Por defecto, no. Lecytap recompensa las visitas a caja, no el monto gastado. Esto ayuda a fidelizar a los clientes habituales y evita cualquier integración técnica con la caja. Si un negocio prefiere recompensar según el monto gastado, será necesaria una integración con su sistema de caja."
+      }
+    }
+  },
+  "PRICING": {
+    "TITLE": "Elige el plan adecuado para tu negocio",
+    "SUBTITLE": "Selecciona el plan perfecto que se adapte a tus necesidades y presupuesto",
+    "MONTHLY": "Mensual",
+    "YEARLY": "Anual",
+    "MONTH": "Mes",
+    "YEAR": "Año",
+    "GET_STARTED": "Comenzar",
+    "SAVE": "Ahorra 20% anualmente",
+    "MOST_POPULAR": "Más popular",
+    "PLANS": {
+      "BASIC": {
+        "TITLE": "Básico",
+        "DESCRIPTION": "Perfecto para comenzar",
+        "FEATURES": [
+          "NFC Lecy",
+          "Configuración flexible",
+          "Caducidad de puntos",
+          "CRM",
+          "Cuenta de cliente",
+          "App para gestión"
+        ]
+      },
+      "PRO": {
+        "TITLE": "Pro",
+        "DESCRIPTION": "Ideal para negocios en crecimiento",
+        "FEATURES": [
+          "Básico",
+          "Reseñas en Google",
+          "Feedback de clientes",
+          "Redes sociales",
+          "Anuncios",
+          "Suma manual de puntos extra"
+        ]
+      },
+      "ENTERPRISE": {
+        "TITLE": "Empresa",
+        "DESCRIPTION": "Para grandes empresas",
+        "FEATURES": [
+          "Pro",
+          "Múltiples tiendas",
+          "Recordatorios automáticos",
+          "Gamificación",
+          "Acceso API",
+          "Integraciones personalizadas"
+        ]
+      }
+    }
+  },
+  "PRIVACY": {
+    "TITLE": "Política de Privacidad",
+    "STEP1": {
+      "T1": "1. Alojamiento de Datos",
+      "T2": "Lecy está alojado por:",
+      "T3": "Amazon Web Services (AWS)",
+      "T4": "410 Terry Ave N, Seattle, WA 98109-5210, Estados Unidos.",
+      "T5": "Los datos se alojan exclusivamente en Europa y Estados Unidos, o en países que ofrecen un nivel adecuado de protección.",
+      "T6": "Lecy seleccionó cuidadosamente AWS por sus altos estándares de seguridad y cumplimiento de normas internacionales (ISO 27001, SOC 1/2/3)."
+    },
+    "STEP2": {
+      "T1": "2. Recopilación y Uso de Datos",
+      "T2": "2.1. Datos recopilados de empresas que usan Lecy",
+      "T3": "Para gestionar tu cuenta profesional de Lecy, recopilamos:",
+      "T4": "- Nombre y apellido del responsable",
+      "T5": "- Correo electrónico profesional",
+      "T6": "- Número de teléfono profesional",
+      "T7": "- Dirección física del negocio",
+      "T8": "Estos datos se utilizan únicamente para:",
+      "T9": "- Crear y administrar tu cuenta profesional de Lecy",
+      "T10": "- Brindar asistencia y soporte al cliente",
+      "T11": "- Informarte en el contexto del uso de los servicios ofrecidos en lecytap.com",
+      "T12": "2.2. Datos recopilados de consumidores",
+      "T13": "Lecy permite a los consumidores ganar y usar puntos de lealtad sin necesidad de proporcionar datos personales.",
+      "T14": "Sin embargo, para acceder a ciertas funciones avanzadas (como recuperar puntos o recibir ofertas personalizadas), puede solicitar:",
+      "T15": "- Nombre y apellido",
+      "T16": "- Dirección de correo electrónico",
+      "T17": "- Número de teléfono",
+      "T18": "- Fecha de nacimiento",
+      "T19": "Estos datos, cuando se proporcionan voluntariamente, son accesibles exclusivamente para el negocio que ofrece el programa de lealtad correspondiente.",
+      "T20": "Lecy no reclama propiedad sobre estos datos y nunca interviene en su uso más allá del servicio descrito en lecytap.com.",
+      "T21": "El negocio puede usar estos datos para:",
+      "T22": "- Enviar información sobre su programa de lealtad o promociones",
+      "T23": "- Mejorar la experiencia del cliente en su establecimiento",
+      "T24": "Lecy no accede, utiliza ni comparte estos datos.",
+      "T25": "2.3. Datos técnicos",
+      "T26": "Para garantizar el correcto funcionamiento del servicio, Lecy recopila ciertos datos técnicos de navegación, tales como:",
+      "T27": "- Tipo y versión del navegador",
+      "T28": "- Sistema operativo",
+      "T29": "- Información del dispositivo",
+      "T30": "- Identificador anónimo almacenado en almacenamiento local",
+      "T31": "Esta información se utiliza únicamente para:",
+      "T32": "- Atribuir puntos de lealtad automáticamente",
+      "T33": "- Optimizar y asegurar la experiencia del usuario",
+      "T34": "Lecy no utiliza datos biométricos, no realiza perfiles de marketing ni rastrea usuarios más allá del propósito descrito en lecytap.com."
+    },
+    "STEP3": {
+      "T1": "3. Cookies",
+      "T2": "Lecy utiliza únicamente cookies estrictamente necesarias para:",
+      "T3": "- Recordar tu sesión y la lealtad en tienda",
+      "T4": "- Asegurar la correcta ejecución del servicio",
+      "T5": "No se usan cookies publicitarias ni rastreadores de terceros.",
+      "T6": "Puedes gestionar tus preferencias de cookies directamente en la configuración de tu navegador."
+    },
+    "STEP4": {
+      "T1": "4. Tus Derechos",
+      "T2": "De acuerdo con el GDPR, tienes los siguientes derechos respecto a tus datos personales:",
+      "T3": "- Derecho de acceso: Acceder a los datos que poseemos sobre ti.",
+      "T4": "- Derecho a rectificación: Corregir datos inexactos.",
+      "T5": "- Derecho de supresión: Solicitar la eliminación de tus datos personales.",
+      "T6": "- Derecho de oposición: Oponerte al uso de tus datos en ciertas circunstancias.",
+      "T7": "- Derecho a la portabilidad: Recuperar tus datos en un formato utilizable.",
+      "T8": "Puedes ejercer estos derechos escribiéndonos a: contact@lecytap.com",
+      "T9": "Nos comprometemos a responder cualquier solicitud en un plazo máximo de 30 días."
+    },
+    "STEP5": {
+      "T1": "5. Seguridad de Datos",
+      "T2": "Lecy implementa las mejores prácticas técnicas y organizativas para garantizar la seguridad de tus datos personales:",
+      "T3": "- Cifrado de transmisiones sensibles",
+      "T4": "- Control estricto de accesos internos",
+      "T5": "- Copias de seguridad seguras y periódicas",
+      "T6": "- Auditorías de seguridad y protocolos de respuesta a incidentes",
+      "T7": "Lecy se compromete expresamente a:",
+      "T8": "Usar tus datos solo para los servicios descritos explícitamente en lecytap.com;",
+      "T9": "Nunca vender, alquilar o compartir tus datos personales;",
+      "T10": "Limitar estrictamente el acceso a los datos al personal autorizado y capacitado.",
+      "T11": "Nuestro enfoque se basa en la minimización, la transparencia y el respeto absoluto a tu privacidad."
+    },
+    "STEP6": {
+      "T1": "6. Modificaciones",
+      "T2": "Lecy se reserva el derecho de modificar esta Política de Privacidad para reflejar cambios legales, regulatorios o funcionales.",
+      "T3": "Cualquier cambio sustancial será comunicado claramente a los usuarios mediante una notificación visible en lecytap.com."
+    },
+    "STEP7": {
+      "T1": "Conclusión",
+      "T2": "Tu confianza es esencial para nosotros.",
+      "T3": "Lecy está diseñado para ofrecerte una experiencia de lealtad fluida, eficiente y respetuosa con la privacidad.",
+      "T4": "Hacemos todo lo posible para proteger tu información, adhiriéndonos estrictamente a nuestro compromiso de privacidad.",
+      "T5": "Para cualquier pregunta relacionada con esta Política, contáctanos en: contact@lecytap.com."
+    },
+    "STEP8": {
+      "T1": "Introducción",
+      "T2": "Estos términos de uso constituyen un acuerdo legal vinculante entre tú, personalmente o en representación de una entidad (“tú”) y NFGO (“nosotros”, “nuestro”), una SAS con sede en 60 RUE FRANCOIS IER 75008 PARIS, registrada en el RCS de París con número 917 657 827, en adelante denominada “Lecy”.",
+      "T3": "Damos la máxima importancia a la protección de tus datos personales.",
+      "T4": "Lecy se compromete a cumplir estrictamente con el Reglamento (UE) 2016/679 (GDPR) y la Ley francesa de protección de datos modificada del 6 de enero de 1978.",
+      "T5": "Todo el procesamiento de datos realizado por Lecy está estrictamente limitado a proveer los servicios descritos y ofrecidos en nuestro sitio oficial [lecytap.com](https://www.lecytap.com).",
+      "T6": "Lecy se compromete a:",
+      "T7": "Recopilar únicamente los datos estrictamente necesarios para proveer los servicios;",
+      "T8": "Nunca vender, alquilar ni transferir tus datos personales a terceros;",
+      "T9": "Nunca usar tus datos para fines distintos a los presentados al usuario en el sitio lecytap.com."
+    }
+  },
+  "TERMS": {
+    "TITLE": "Términos y Condiciones de Uso",
+    "LAST_UPDATE": "26 de abril de 2025",
+    "SECTIONS": {
+      "1": {
+        "TITLE": "Descripción del Servicio",
+        "CONTENT": [
+          "Lecy es un servicio provisto por NFGO, una SAS registrada en el RCS de París con número 917 657 827, con sede en 60 RUE FRANCOIS IER 75008 PARIS (en adelante 'nosotros', 'Lecy' o 'NFGO').",
+          "Lecy ofrece a los comerciantes una solución de lealtad basada en el uso de una etiqueta NFC, y a los consumidores una experiencia de lealtad simple y segura, conforme con GDPR y las funcionalidades descritas en lecytap.com."
+        ]
+      },
+      "2": {
+        "TITLE": "Registro y Funcionamiento del Servicio",
+        "CONTENT": [
+          "2.1. Para Comerciantes",
+          "Los comerciantes que deseen usar Lecy deben:",
+          "- Crear una cuenta proporcionando la información solicitada (nombre, correo, teléfono, dirección, etc.).",
+          "- Suscribirse al servicio bajo las condiciones tarifarias vigentes.",
+          "- Recibir el(los) dispositivo(s) NFC proporcionados para su programa de lealtad.",
+          "Luego, los comerciantes pueden:",
+          "- Definir y modificar libremente las condiciones de su programa de lealtad (visitas requeridas, recompensas, etc.).",
+          "- Ver datos de los consumidores que interactuaron con su programa (detalles de contacto proporcionados, saldo de puntos).",
+          "- Añadir información sobre su negocio (enlaces a redes sociales, sitio web, descripciones, etc.).",
+          "- Usar los datos de contacto proporcionados por sus clientes para enviar comunicaciones comerciales relacionadas con su actividad, en cumplimiento con GDPR.",
+          "2.2. Para Consumidores",
+          "Los consumidores pueden:",
+          "- Escanear el dispositivo NFC de un negocio participante para ganar un punto de lealtad.",
+          "- Ser reconocidos automáticamente en visitas posteriores gracias a las tecnologías implementadas.",
+          "- Usar sus puntos de lealtad una vez alcanzado el umbral definido por el comerciante.",
+          "Proporcionar datos personales es opcional y permite acceder a funciones adicionales (recuperación de puntos, comunicaciones personalizadas, etc.)."
+        ]
+      },
+      "3": {
+        "TITLE": "Compromisos del Usuario",
+        "CONTENT": [
+          "Al usar Lecy, comerciantes y consumidores aceptan:",
+          "- Usar el servicio conforme a las leyes y regulaciones aplicables.",
+          "- Respetar estos Términos y Condiciones de Uso.",
+          "- No usar Lecy para fines ilegales, fraudulentos o dañinos.",
+          "Los comerciantes específicamente aceptan:",
+          "- No enviar comunicaciones comerciales no solicitadas a consumidores sin consentimiento previo si la ley lo requiere.",
+          "- Respetar las reglas de protección de datos aplicables en Europa."
+        ]
+      },
+      "4": {
+        "TITLE": "Derechos de Lecy (NFGO)",
+        "CONTENT": [
+          "NFGO se reserva el derecho, en cualquier momento y sin previo aviso, a:",
+          "- Suspender, limitar o eliminar el acceso al servicio para cualquier usuario (comerciante o consumidor) que viole estos Términos o la ley aplicable.",
+          "- Cancelar cualquier suscripción en caso de comportamiento fraudulento, abusivo o poco ético.",
+          "- Modificar, interrumpir o terminar cualquier funcionalidad de Lecy, temporal o permanentemente, por razones legales, técnicas o comerciales.",
+          "NFGO también puede:",
+          "- Denegar el acceso al servicio a cualquier usuario que no acepte las condiciones modificadas.",
+          "- Tomar todas las medidas legales para proteger sus derechos y los de sus usuarios."
+        ]
+      },
+      "5": {
+        "TITLE": "Propiedad Intelectual",
+        "CONTENT": [
+          "Todos los elementos del servicio Lecy (sitio web, app, dispositivos NFC, marcas, logotipos, contenido textual o gráfico) son propiedad exclusiva de NFGO o sus socios.",
+          "Queda prohibida cualquier reproducción, distribución o explotación sin permiso expreso."
+        ]
+      },
+      "6": {
+        "TITLE": "Limitación de Responsabilidad",
+        "CONTENT": [
+          "Lecy se provee 'tal cual'.",
+          "NFGO no garantiza ausencia total de errores, interrupciones o fallos.",
+          "Bajo ninguna circunstancia NFGO será responsable por daños directos o indirectos derivados del uso o imposibilidad de uso del servicio por parte de comerciantes o consumidores.",
+          "Cada comerciante es responsable exclusivo de:",
+          "- El contenido de sus comunicaciones promocionales",
+          "- Cumplimiento de las leyes aplicables a su programa de lealtad"
+        ]
+      },
+      "7": {
+        "TITLE": "Datos Personales",
+        "CONTENT": [
+          "El uso de Lecy implica la recopilación y tratamiento de ciertos datos personales, conforme a la Política de Privacidad disponible en lecytap.com.",
+          "NFGO se adhiere estrictamente a los principios del GDPR:",
+          "- Recopilación mínima de datos",
+          "- Uso transparente",
+          "- Seguridad reforzada",
+          "- No venta ni uso abusivo de datos personales"
+        ]
+      },
+      "8": {
+        "TITLE": "Modificaciones a los Términos",
+        "CONTENT": [
+          "NFGO puede modificar estos Términos y Condiciones de Uso en cualquier momento.",
+          "Los usuarios serán informados sobre cambios significativos.",
+          "Cualquier uso del servicio tras las modificaciones implica aceptación de los nuevos términos."
+        ]
+      },
+      "9": {
+        "TITLE": "Ley Aplicable y Jurisdicción",
+        "CONTENT": [
+          "Estos Términos se rigen por la ley francesa.",
+          "Cualquier disputa relativa a su interpretación o ejecución será sometida a la jurisdicción exclusiva de los tribunales de París, salvo disposición legal contraria."
+        ]
+      },
+      "10": {
+        "TITLE": "Contacto",
+        "CONTENT": [
+          "Para cualquier consulta relativa a estos Términos y Condiciones de Uso, puedes contactar a:",
+          "contact@lecytap.com"
+        ]
+      }
+    }
+  },
+  "LOGIN": {
+    "email": "Correo electrónico",
+    "required_email": "El correo electrónico es obligatorio",
+    "valid_email": "Introduce una dirección de correo válida",
+    "password": "Contraseña",
+    "required_password": "La contraseña es obligatoria",
+    "create_account": "Crear cuenta",
+    "forget_password": "Olvidé mi contraseña",
+    "no_account": "¿Aún no tienes una cuenta?",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "reset_password": "Restablecer contraseña",
+    "verificationCode": "Código de verificación",
+    "enter_email": "Introduce tu correo electrónico",
+    "more": "Más",
+    "language": "Idioma",
+    "faq": "Preguntas frecuentes",
+    "login": "Iniciar sesión",
+    "client_link_text": "Crear una cuenta",
+    "client_here_link": "Soy un cliente"
+  },
+  "ABOUT_US": {
+    "TITLE": "Sobre nosotros",
+    "SUBTITLE": "Descubra la historia de Lecy, nuestra visión y lo que nos motiva cada día.",
+    "TITLE1": "Nuestra historia",
+    "TITLE2": "Para un servicio sin igual, tecnología sin igual",
+    "TITLE3": "Nuestra misión",
+    "TITLE4": "Mensaje del CEO",
+    "TITLE5": "Lealtad, reinventada",
+    "TEXT1": "<b>Una forma más simple de construir lealtad, nacida de una necesidad real</b><br><hr><p class='mb-0'>Desde 2022, nuestra misión en NFGO ha sido ayudar a restaurantes a digitalizarse con herramientas simples, útiles y realmente usadas (<a href='https://sittap.com' target='_blank'>sittap.com</a>).</p>Hemos apoyado muchos establecimientos brindando soluciones innovadoras diseñadas para sus necesidades diarias.<br>Pero fue durante un diagnóstico en un restaurante <b>mexicano</b> de comida rápida cuando un comentario simple cambió todo:<br><br>“<b>Pago 50€ por un sistema de lealtad… pero nadie lo usa. Los clientes no quieren ingresar su número de teléfono ni confirmarlo con un código cada vez — ni descargar una app y registrarse solo para acumular puntos.</b>”</br><br>— El gerente del restaurante<br>Esa frase reveló un problema mucho más amplio:<br><br>👉 <b>Los programas de lealtad tradicionales son demasiado pesados, complicados y exigentes.</b>",
+    "TEXT2": "<b>Una tecnología reinventada</b><br><hr>En ese momento, ya usábamos NFC para detectar presencia en la mesa — para simplificar pedidos sin reservas.<br>Entonces surgió una idea simple pero poderosa:<br>¿Y si nuestro sistema NFC también pudiera usarse para lealtad?<br> <br><b>Sin tarjeta, sin app, sin formularios Solo un toque rápido — y la lealtad se activa al instante.</b><br>",
+    "TEXT3": "<b>Lo que estamos construyendo hoy</b><br><hr>Trabajamos para ofrecer una experiencia fluida e intuitiva en la que los gerentes de restaurantes puedan confiar para involucrar a sus clientes. Con nuestras soluciones digitales, el programa de lealtad se vuelve sencillo, integrado en la experiencia gastronómica. No es solo una herramienta, es una revolución en la conexión entre restaurantes y clientes.",
+    "TEXT4": "<b><br><h1 class='_title text-center'>De restaurantes a todos los negocios locales</h1></b><br><hr><br>Así nació Lecy — un producto por derecho propio.<br>Una solución de lealtad diseñada para todo tipo de negocios locales: restaurantes, salones, boutiques, supermercados, cafés y más.<br>Con Lecy, cualquier negocio — ya sea que tenga un POS en la nube, una caja tradicional o ninguno — puede ahora:<br><br>• <b>Ofrecer un programa de lealtad moderno y sin fricción</b><br>• <b>Aumentar las visitas de clientes recurrentes</b><br>• <b>Recoger reseñas y opiniones</b><br>• <b>Construir relaciones genuinas y duraderas con sus clientes</b><br><br>Todo esto, con <b>sin app, sin registro y sin integración con sistemas.</b>",
+    "TEXT5": "<b>Una palabra del CEO</b><hr><br>En Lecy creemos que la lealtad nunca debe ser una carga. Debe ser simple, rápida, sin app, sin cuenta, y siempre respetuosa con la privacidad del cliente.<br>Debe ser fácil de configurar — con o sin sistema POS.<br>Por eso creamos Lecy: una solución sin integración, instalable en 2 minutos e instantáneamente usable por tus clientes — que ganan puntos en solo 2 segundos.<br><br><b>¿Por qué?</b><br><br>Porque un programa de lealtad bien diseñado puede transformar un negocio:<br><br><b>Más visitas</b><br><b>Relaciones más fuertes</b><br><b>Mayor visibilidad</b><br><br>Nuestra misión es ayudar a cada propietario de negocio a triunfar de forma sostenible, con herramientas modernas, accesibles y pensadas para el mundo real.",
+    "TEXT6": "Mira lo que la automatización puede hacer por tu negocio",
+    "SOL_FOR_YOU": "Tenemos la solución para ti.",
+    "CONTACT_US": "Contáctanos"
+  },
+  "WEBSITE": {
+    "TABS": {
+      "ANNOUNCEMENTS": "Anuncios",
+      "SOCIAL_MEDIA": "Redes sociales",
+      "GOOGLE_REVIEW": "Reseñas de Google"
+    },
+    "ANNOUNCEMENTS": {
+      "TITLE": "Gestionar anuncios",
+      "ADD_BUTTON": "Añadir",
+      "NO_ANNOUNCEMENTS": "No hay anuncios aún.",
+      "VIEW_MORE": "Ver más  ",
+      "MODAL": {
+        "ADD_TITLE": "Agregar anuncio",
+        "EDIT_TITLE": "Editar anuncio",
+        "TITLE_LABEL": "Título",
+        "TITLE_PLACEHOLDER": "Título del anuncio",
+        "IMAGE_LABEL": "Imagen",
+        "SAVE_CHANGES": "Guardar cambios",
+        "SAVING": "Guardando",
+        "ADD_ANNOUNCEMENT": "Agregar anuncio",
+        "CANCEL": "Cancelar",
+        "CHOOSE_IMAGE": "Elegir imagen",
+        "IMAGE_PREVIEW": "Vista previa de la imagen",
+        "CURRENT_IMAGE": "Imagen actual",
+        "NEW_IMAGE": "Nueva imagen",
+        "DESCRIPTION_LABEL": "Descripción",
+        "DESCRIPTION_PLACEHOLDER": "Introduce la descripción del anuncio",
+        "DESCRIPTION_HELP": "Máximo 500 caracteres",
+        "LINK_LABEL": "Enlace externo (Opcional)",
+        "LINK_PLACEHOLDER": "https://...",
+        "LINK_HELP": "Añadir un enlace a un artículo o anuncio externo",
+        "DESCRIPTION_HINT": "Por favor, mantenga la descripción breve (menos de {{length}} caracteres) para mantener un buen diseño.",
+        "MAX_LEN": "Máximo 20 caracteres permitidos"
+      },
+      "DELETE": {
+        "TITLE": "Eliminar anuncio",
+        "CONFIRMATION": "¿Seguro que deseas eliminar este anuncio? Esta acción no se puede deshacer.",
+        "DELETE_BUTTON": "Eliminar",
+        "CANCEL_BUTTON": "Cancelar"
+      }
+    },
+    "SOCIAL_MEDIA": {
+      "TITLE": "Enlaces a redes sociales",
+      "MODAL": {
+        "ADD_TITLE": "Agregar red social",
+        "EDIT_TITLE": "Editar",
+        "URL_LABEL": "URL",
+        "URL_PLACEHOLDER": "https://...",
+        "SAVE_CHANGES": "Guardar cambios",
+        "ADD_LINK": "Agregar enlace",
+        "CANCEL": "Cancelar"
+      }
+    },
+    "GOOGLE_REVIEW": {
+      "TITLE": "Configuración de reseñas de Google",
+      "URL_LABEL": "URL de reseña de Google",
+      "URL_PLACEHOLDER": "https://...",
+      "HELP_TEXT": "Introduce la URL de reseñas de tu perfil comercial en Google",
+      "SAVE_BUTTON": "Guardar"
+    },
+    "NOTIFICATIONS": {
+      "SUCCESS": {
+        "TITLE": "¡Éxito!",
+        "ANNOUNCEMENT_SAVED": "Anuncio actualizado con éxito",
+        "ANNOUNCEMENT_DELETED": "Anuncio eliminado con éxito",
+        "STATUS_UPDATED": "Estado actualizado con éxito",
+        "SOCIAL_MEDIA_UPDATED": "Redes sociales actualizadas con éxito",
+        "GOOGLE_REVIEW_SAVED": "URL de reseña de Google guardada con éxito"
+      },
+      "ERROR": {
+        "TITLE": "Error",
+        "LOADING_ERROR": "Error al cargar detalles del sitio web",
+        "ANNOUNCEMENT_ERROR": "Error al actualizar el anuncio",
+        "DELETE_ERROR": "Error al eliminar el anuncio",
+        "STATUS_ERROR": "Error al actualizar el estado del anuncio",
+        "SOCIAL_MEDIA_ERROR": "Error al actualizar redes sociales",
+        "FILE_UPLOAD_ERROR": "Error al subir archivo del anuncio"
+      }
+    }
+  },
+  "DEMO": {
+    "HERO_TITLE": "Una experiencia de usuario rápida, visual y funcional",
+    "HERO_SUBTITLE": "Descubre cómo Lecy puede transformar tu flujo de trabajo digital.",
+    "CTA": "Ver la demo",
+    "THANKYOU_TITLE": "Agradecimientos",
+    "THANKYOU_TEXT_1": "Agradecemos calurosamente a A Jung por su valiosa colaboración. A Jung es restauradora en París y fue nuestra primera clienta. Como parte de nuestra colaboración, nos ofreció la UX (experiencia de usuario) de Lecy.",
+    "THANKYOU_TEXT_2": "Antes de abrir su restaurante coreano, Kimchi Street, en el distrito 12 de París, A Jung trabajó durante 15 años como diseñadora UX, especialmente en el diseño de productos para grandes empresas como Microsoft.",
+    "THANKYOU_TEXT_3": "Encontramos que su diseño refleja sutilmente su cultura de origen coreano: rápido, moderno, visualmente claro y jerárquico, y perfectamente alineado con un público joven y conectado.",
+    "THANKYOU_TEXT_4": "Estamos orgullosos de haber adoptado este diseño y agradecemos calurosamente a A Jung por su talento, generosidad y confianza.",
+    "THANKYOU_AUTHOR": "A Jung, Kimchi street"
+  },
+  "COMMON": {
+    "LOADING": "Cargando",
+    "SAVE": "Guardar",
+    "UPDATE": "Actualizar",
+    "CANCEL": "Cancelar",
+    "NEXT": "Próxima",
+    "BACK": "Atrás",
+    "VALIDATION": {
+      "required": "Este campo es obligatorio.",
+      "max_length": "Máximo {{length}} caracteres permitidos.",
+      "min_length": "Mínimo {{length}} caracteres requeridos.",
+      "invalid_email": "Por favor, introduce una dirección de correo electrónico válida.",
+      "invalid_phone": "Por favor, introduce un número de teléfono válido.",
+      "invalid_post_code": "El código postal debe contener solo números."
+    },
+    "IMAGE_SIZE_EXCEEDED": "El tamaño de la imagen no debe superar los 2MB",
+    "ONLY_IMAGES_ALLOWED": "Solo se admiten los formatos de imagen PNG, JPG o JPEG",
+    "BAD_NFC_CODE": "El código NFC es incorrecto. Por favor, inténtalo de nuevo con uno válido.",
+    "SUCCESSFULLY_SAVED": "Guardado con éxito",
+    "NOT_PROVIDED": "No hay información del cliente."
+  },
+  "ADMINISTRATOR": {
+    "REFERRALS": "Referencias",
+    "CLIENTS": "Clientas",
+    "COMPANY_NAME": "Nombre de la empresa",
+    "EMAIL": "Correo electrónico",
+    "ADDRESS": "Dirección",
+    "STATUS": "Estado",
+    "SENT_NFC": "NFC enviada",
+    "ACTIVATE_NFC": "Activar NFC",
+    "CONTACT_US": "Contáctenos",
+    "TAG_REQUESTS": "Solicitudes de etiquetas",
+    "CREATED": "Nuevo",
+    "SENT": "NFC Enviado",
+    "RECEIVED": "Activo",
+    "COPY_CODE": "Copiar el código",
+    "COPIED": "Copied",
+    "CONTACT": {
+      "NAME": "Nombre",
+      "COMPANY_NAME": "Nombre de la empresa",
+      "PHONE": "Teléfono",
+      "EMAIL": "Correo electrónico",
+      "MESSAGE": "Mensaje",
+      "CREATED_AT": "Creado el",
+      "START_DATE": "Fecha de inicio",
+      "END_DATE": "Fecha de finalización",
+      "INFO": "Información de contacto"
+    },
+    "TAG_REQUEST": {
+      "SHOP_NAME": "Nombre de la tienda",
+      "CODE": "Código",
+      "NAME": "Nombre del destinatario",
+      "ADDRESS_FULL": "Dirección",
+      "SENT_AT": "Enviado el",
+      "RECEIVED_AT": "Recibido el",
+      "STATUS": "Estado"
+    }
+  },
+  "USER_STATUS": {
+    "ALL": "Todos los estados",
+    "NEW_USER": "Usuario nuevo",
+    "ACTIVE_USER": "Usuario activo",
+    "DELETED_USER": "Usuario eliminado",
+    "PAUSED_USER": "Cuenta de usuario en pausa",
+    "VERIFIED_EMAIL_USER": "Usuario con correo verificado",
+    "WAITING_TERM_OF_USE_CONFIRMATION": "Pendiente de términos",
+    "EXPIRED_USER": "Cuenta expirada",
+    "USER_WILL_EXPIRE": "La cuenta expirará pronto",
+    "WAITING_FOR_TAG": "Esperando etiqueta",
+    "TAG_SENT": "Etiqueta enviada",
+    "DELETED": "ELIMINADO"
+  },
+  "SHOP": {
+    "CREATE_NEW_SHOP": "Nueva tienda",
+    "NAME": "Nombre",
+    "SHOP_INFORMATION": "Info tienda",
+    "ACTIVATE_SHOP": "Activar",
+    "ADD_NFC": "Añadir NFC",
+    "NFC_TAG": "Etiqueta NFC",
+    "ENTER_NFC_TAG": "Escribir etiqueta",
+    "SHOPS_APPLIED": "Tiendas asignadas",
+    "ALL_SHOPS": "Todas",
+    "APPLY_FILTER": "Filtrar",
+    "ASSIGN_REWARD_SHOP": "Dar premio",
+    "ASSIGN_ANNOUNCEMENT_SHOP": "Dar aviso",
+    "SHOP_CREATED": "Shop Created Successfully!",
+    "ALERT": {
+      "CREATE": "OK",
+      "SURE_CREATE": "¿Crear tienda?",
+      "YES": "Sí",
+      "CANCEL": "Cancelar"
+    }
+  },
+  "PROGRAM": {
+    "TABS": {
+      "LEVELS_REWARDS": "Niveles y Recompensas",
+      "SETTINGS": "Configuración"
+    }
+  },
+  "MYACCOUNT": {
+    "TABS": {
+      "INFORMATION": "Información de la empresa",
+      "SUBSCRIPTION": "Suscripción",
+      "REFERRALS": "Referencias"
+    }
+  },
+  "REFERRALS": {
+    "TITLE": "Referidos",
+    "SUBTITLE": "Gestiona tus solicitudes de referidos",
+    "INVITE": "Invitar a alguien",
+    "ADD_NEW": "Agregar referido",
+    "EDIT": "Editar",
+    "DELETE": "Eliminar",
+    "INTRO": {
+      "MODAL_TITLE": "Programa de recomendación",
+      "BADGE": "1 mes gratis para los dos",
+      "TITLE": "Ofrece y recibe 1 mes gratis",
+      "SUBTITLE": "Invita a alguien: cuando se suscriba, ambos ganan un mes de suscripción.",
+      "POINT1": "Fácil, rápido y sin compromiso",
+      "POINT2": "Un mes gratis para los dos",
+      "POINT3": "Invitaciones ilimitadas",
+      "CTA": "Invitar a alguien",
+      "HINT": "Empieza con 3 a 5 clientes que ya conoces por su nombre.",
+      "SKIP": "Omitir por ahora",
+      "NEXT": "Invitar a alguien"
+    },
+    "VIEW": {
+      "CARD": "Tarjetas",
+      "TABLE": "Tabla"
+    },
+    "EMPTY_TITLE": "Todavía no has referido a nadie",
+    "EMPTY_TEXT": "Invita a alguien de tu red para empezar",
+    "LIST": {
+      "NAME": "Nombre",
+      "EMAIL": "Correo electrónico",
+      "PHONE": "Teléfono",
+      "CREATED_AT": "Creado",
+      "UPDATED_AT": "Actualizado",
+      "STATUS": "Estado",
+      "ACTIONS": "Acciones",
+      "MESSAGE": "Mensaje"
+    },
+    "TABLE": {
+      "NAME": "Nombre",
+      "EMAIL": "Correo electrónico",
+      "PHONE": "Teléfono",
+      "MESSAGE": "Mensaje",
+      "CREATED": "Creado"
+    },
+    "STATUS": {
+      "PENDING": "Pendiente",
+      "IN_PROGRESS": "En progreso",
+      "SUCCEEDED": "Completado",
+      "FAILED": "Fallido"
+    },
+    "FORM": {
+      "CREATE_TITLE": "Agregar padrino",
+      "UPDATE_TITLE": "Editar padrino",
+      "CREATE_SUB": "Añade los datos de la persona a la que quieres invitar.",
+      "UPDATE_SUB": "Actualiza los datos de la invitación.",
+      "STEP_1": "Detalles",
+      "STEP_2": "Confirmación",
+      "NAME": "Nombre completo",
+      "PHONE": "Teléfono",
+      "EMAIL": "Correo electrónico",
+      "MESSAGE": "Mensaje (opcional)",
+      "PLACEHOLDER_NAME": "p. ej. Juan Pérez",
+      "PLACEHOLDER_PHONE": "p. ej. +34 600 123 456",
+      "PLACEHOLDER_EMAIL": "p. ej. juan@ejemplo.com",
+      "PLACEHOLDER_MESSAGE": "Añade una nota para la persona invitada",
+      "ERROR_NAME": "El nombre es obligatorio",
+      "ERROR_PHONE": "El teléfono es obligatorio",
+      "ERROR_EMAIL": "El correo electrónico no es válido",
+      "ERROR_CONTACT": "Proporciona un teléfono o correo electrónico válido"
+    },
+    "CONFIRM": {
+      "TITLE": "Confirmar invitación",
+      "CONTACT": "Contacto",
+      "NOTE_CREATE": "Se creará una invitación con estos datos.",
+      "NOTE_UPDATE": "Tus cambios se guardarán."
+    },
+    "DELETE_MODAL": {
+      "TITLE": "Eliminar referido",
+      "TEXT": "¿Seguro que quieres eliminar este referido?",
+      "CONFIRM": "Eliminar",
+      "CANCEL": "Cancelar"
+    },
+    "TOAST": {
+      "CREATED": "Invitación creada correctamente",
+      "UPDATED": "Invitación actualizada correctamente",
+      "DELETED": "Referido eliminado correctamente"
+    },
+    "PAGINATION": {
+      "SHOWING": "Mostrando",
+      "OF": "de",
+      "ENTRIES": "registros",
+      "ITEMS_PER_PAGE": "Elementos por página"
+    },
+    "NO_RECORD_FOUND": "No se encontraron registros",
+    "ERROR_LOAD": "No se pueden cargar los referidos",
+    "ERROR_CREATE": "No se puede crear la invitación",
+    "ERROR_UPDATE": "No se puede actualizar la invitación",
+    "ERROR_DELETE": "No se puede eliminar el referido"
+  },
+  "NFC_SUBSCRIPTION": {
+    "TITLE": "Recibe tu etiqueta NFC lista<br> para usar en 3 días",
+    "TRY_FREE": "Pruébalo gratis durante 1 mes, sin compromiso",
+    "NO_CARD": "No se requiere tarjeta de crédito al registrarte",
+    "NO_INTEGRATION": "Sin integración",
+    "CANCEL_ANYTIME": "Cancela en cualquier momento sin tarifas",
+    "PERSONALIZED_SUPPORT": "Disfruta de 30 minutos de soporte personalizado con un experto en fidelización",
+    "SUBSCRIBE": "Suscribirse a Lecy"
+  },
+  "CONTACT": {
+    "TITLE": "Nous contacter",
+    "SUBTITLE": "Nous serions ravis de vous entendre. Veuillez remplir le formulaire ci-dessous.",
+    "FIELDS": {
+      "FIRST_NAME": "Prénom",
+      "LAST_NAME": "Nom",
+      "COMPANY_NAME": "Nom de l'entreprise",
+      "PHONE": "Numéro de téléphone",
+      "EMAIL": "Adresse e-mail",
+      "MESSAGE": "Message"
+    },
+    "PLACEHOLDERS": {
+      "FIRST_NAME": "Entrez votre prénom",
+      "LAST_NAME": "Entrez votre nom",
+      "COMPANY_NAME": "Entrez le nom de votre entreprise",
+      "PHONE": "Entrez votre numéro de téléphone",
+      "EMAIL": "Entrez votre adresse e-mail",
+      "MESSAGE": "Tapez votre message ici..."
+    },
+    "BUTTONS": {
+      "SUBMIT": "Envoyer le message",
+      "SENDING": "Envoi..."
+    },
+    "VALIDATION": {
+      "REQUIRED": "Ce champ est obligatoire",
+      "INVALID_EMAIL": "Veuillez entrer une adresse e-mail valide",
+      "INVALID_PHONE": "Veuillez entrer un numéro de téléphone valide",
+      "MIN_LENGTH": "La longueur minimale est de {{min}} caractères"
+    },
+    "MESSAGE_SENT": "Mensaje Enviado",
+    "SUCCESS": "Votre message a été envoyé avec succès !",
+    "ERROR": "Une erreur s'est produite. Veuillez réessayer plus tard."
+  }
+}
