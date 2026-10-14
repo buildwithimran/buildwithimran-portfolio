@@ -67,6 +67,7 @@ interface Experience {
   imports: [YouTubePlayerModule],
   host: {
     '(window:scroll)': 'onWindowScroll()',
+    '(window:resize)': 'sizeVideoPlayer()',
   },
 })
 export class PortfolioComponent implements AfterViewInit {
@@ -99,8 +100,6 @@ export class PortfolioComponent implements AfterViewInit {
     { id: 'experience', label: 'Experience' },
     { id: 'architecture', label: 'Systems' },
     { id: 'stack', label: 'Stack' },
-    { id: 'process', label: 'Process' },
-    { id: 'services', label: 'Services' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -133,8 +132,9 @@ export class PortfolioComponent implements AfterViewInit {
   // Count-up animation signals
   displayedProjects = signal(0);
 
-  width = 900;
-  height = 500;
+  // YouTube player size — recalculated on open/resize so it fits phones (16:9, max 864px wide).
+  videoWidth = signal(864);
+  videoHeight = signal(486);
 
   constructor() {
     this.experience.set(this.processExperienceData());
@@ -535,7 +535,7 @@ export class PortfolioComponent implements AfterViewInit {
           url: 'https://loyalty-tap.buildwithimran.online',
         },
       ],
-      videoUrl: '',
+      videoUrl: 'pt5d_PdaYs8',
       subTitle: 'Multi-tenant Loyalty & Rewards SaaS — Owned Product',
       myRole:
         'Solo full-stack owner. Architected a modular Angular 21 app (standalone components, lazy-loaded feature routes, route guards, HTTP auth interceptor, i18n, SEO) split across merchant, customer, super-admin, visit, and public surfaces. Designed and built the Express + Mongoose API as domain modules (merchant, customer, super-admin, subscription, public-site) with JWT auth, TOTP-based 2FA, Cloudinary uploads, Google Sign-In, and background cron jobs for account deletion, subscription reminders, and scan-claim expiry. Deployed on AWS Amplify + Firebase Hosting.',
@@ -570,7 +570,7 @@ export class PortfolioComponent implements AfterViewInit {
       statusClass: 'text-primary border-primary/30',
       description:
         'Owned cloud file-vault SaaS. Tiered plans, server-enforced quotas, share-link controls, workspace roles, and a branded client portal.',
-      imageUrl: './assets/images/projects/jdrive/jdrive.png',
+      imageUrl: './assets/images/projects/jdrive/jdrive.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'NestJS', icon: 'dns' },
@@ -619,7 +619,7 @@ export class PortfolioComponent implements AfterViewInit {
       statusClass: 'text-primary border-primary/30',
       description:
         'Owned real-time group messaging app. Persistent socket layer, invite-only spaces, and a JWT handshake that auths both REST and Socket.io.',
-      imageUrl: './assets/images/projects/nexa/nexa.png',
+      imageUrl: './assets/images/projects/nexa/nexa.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'Node.js', icon: 'dns' },
@@ -661,13 +661,160 @@ export class PortfolioComponent implements AfterViewInit {
       ],
     },
     {
+      title: 'VeoLMS',
+      type: 'EdTech',
+      status: 'OWNED · LIVE',
+      statusClass: 'text-primary border-primary/30',
+      description:
+        'Owned community-first LMS. HLS video lessons, live workshops, course group chat, semantic search, AI tutor, and verified certificates.',
+      imageUrl: './assets/images/projects/veolms/veolms.jpg',
+      tech: [
+        { name: 'Angular 21 SSR', icon: 'data_object' },
+        { name: 'NestJS', icon: 'dns' },
+        { name: 'MongoDB', icon: 'database' },
+        { name: 'BullMQ', icon: 'memory' },
+        { name: 'Socket.io', icon: 'bolt' },
+      ],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://veolms.buildwithimran.online',
+        },
+      ],
+      videoUrl: 'slFdr3aJCpg',
+      subTitle: 'Community-First Learning Platform — Courses, Workshops, AI Tutor',
+      myRole:
+        'Solo full-stack owner. Built the Angular 21 frontend with SSR, a service worker, hls.js playback, Chart.js dashboards, and socket.io-client, split into student, teacher, admin, community, workshops, and payment features. Designed the NestJS 11 backend as 30+ domain modules with Mongoose, JWT + Google OAuth, BullMQ queues on Redis (email, campaigns) with Bull Board, Redis-backed throttling, Socket.io messaging, ffmpeg HLS transcoding, Stripe payments and payouts, PDFKit certificates, Sentry, and Swagger docs.',
+      problem:
+        'Online courses are usually a lonely playlist — learners drop off without peers, live sessions, or help when they get stuck. Creators also need payments, payouts, and moderation without stitching five tools together.',
+      constraints: [
+        'Video must stream adaptively on slow connections — no raw MP4 downloads.',
+        'Three roles (student, teacher, admin) with strict authorization on every endpoint.',
+        'Search must find courses by meaning, not just keywords.',
+        'AI tutor must work across providers without exposing API keys in the database.',
+        'Email campaigns and notifications must never block the request path.',
+      ],
+      whatYouShipped: [
+        'Course builder: sections, lessons, quizzes, progress tracking, reviews, and wishlist.',
+        'ffmpeg pipeline that transcodes uploads to HLS, played back with hls.js.',
+        'Per-course community: group chat over Socket.io, course feed, and live workshops.',
+        'Semantic search using MiniLM embeddings (@xenova/transformers) running in-process.',
+        'AI tutor with pluggable providers (Groq, Gemini, OpenAI, Claude) and encrypted keys at rest.',
+        'Stripe checkout, coupons, multi-currency pricing, teacher payouts, and refund claims.',
+        'PDF certificates on completion, BullMQ email and campaign queues, newsletter, and moderation tools.',
+      ],
+      impact: [
+        'HLS streaming keeps lessons playable on weak connections instead of stalling on full-file downloads.',
+        'Embedding search runs in-process — no paid vector database needed to ship semantic search.',
+        'Queue-backed email and campaigns keep API latency flat during bulk sends.',
+        '30+ isolated NestJS modules let teacher, payment, and community features ship independently.',
+      ],
+    },
+    {
+      title: 'Bizora',
+      type: 'E-commerce',
+      status: 'OWNED · LIVE',
+      statusClass: 'text-primary border-primary/30',
+      description:
+        'Owned fashion e-commerce store. Next.js storefront, separate admin app, and a NestJS API covering catalog, checkout, orders, returns, and procurement.',
+      imageUrl: './assets/images/projects/bizora/bizora.jpg',
+      tech: [
+        { name: 'Next.js 16', icon: 'web' },
+        { name: 'NestJS', icon: 'dns' },
+        { name: 'MongoDB', icon: 'database' },
+        { name: 'Stripe', icon: 'payments' },
+        { name: 'Tailwind 4', icon: 'palette' },
+      ],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://bizora.buildwithimran.online',
+        },
+      ],
+      videoUrl: '',
+      subTitle: 'Pakistani Fashion Store — Storefront, Admin, and Commerce API',
+      myRole:
+        'Solo full-stack owner. Built a pnpm monorepo with three apps: a Next.js 16 storefront (App Router, Server Components, Server Actions, next-intl, Zustand cart, Stripe Elements), a Next.js admin (TanStack Table, drag-and-drop sorting with dnd-kit, React Hook Form + Zod), and a NestJS 11 API on the native MongoDB driver with Argon2 auth, Zod contracts, PDFKit invoices, and Nodemailer. Enforced Conventional Commits with Husky and commitlint.',
+      problem:
+        'Pakistani fashion buyers wanted a proper online store — men and women collections, card checkout, and WhatsApp ordering — plus a back office to run stock, orders, and returns without marketplace fees.',
+      constraints: [
+        'Money stored as integer minor units in PKR — no floating-point totals anywhere.',
+        'Storefront must be fast and indexable, so Server Components by default.',
+        'Strict layering: UI → feature → service → repository → MongoDB.',
+        'Admin and storefront deploy separately but share one API contract.',
+      ],
+      whatYouShipped: [
+        'Storefront: collections, search, product pages, cart, Stripe checkout, and customer accounts.',
+        'Admin: catalog with drag-and-drop ordering, orders, customers, coupons, promotions, and reports.',
+        'API domains: catalog, checkout, orders, returns, shipping, procurement, reviews, support, audit.',
+        'PDF invoices via PDFKit and transactional email via Nodemailer.',
+        'Shared Zod contracts so storefront, admin, and API validate the same shapes.',
+      ],
+      impact: [
+        'Integer minor-unit money model removes rounding errors from totals, discounts, and refunds.',
+        'Server-rendered storefront keeps product pages crawlable for search.',
+        'Audit and procurement modules give the owner stock and change history without spreadsheets.',
+        'Monorepo with enforced commit conventions keeps three apps releasable from one repo.',
+      ],
+    },
+    {
+      title: 'TempoType',
+      type: 'Web App',
+      status: 'OWNED · LIVE',
+      statusClass: 'text-primary border-primary/30',
+      description:
+        'Owned typing test with an adaptive coach. Works offline without login; optional account adds cloud sync, history, and a leaderboard.',
+      imageUrl: './assets/images/projects/tempo-type/tempo-type.jpg',
+      tech: [
+        { name: 'Angular 21', icon: 'data_object' },
+        { name: 'Express', icon: 'dns' },
+        { name: 'MongoDB', icon: 'database' },
+        { name: 'IndexedDB', icon: 'storage' },
+        { name: 'Zod', icon: 'verified' },
+      ],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://tempo-drill.web.app',
+        },
+      ],
+      videoUrl: '',
+      subTitle: 'Typing Test + Adaptive Coach — Offline-First, Sync Optional',
+      myRole:
+        'Solo full-stack owner. Built the Angular 21 frontend with standalone components and signals, a custom typing engine, IndexedDB local storage, and Chart.js progress charts. Backend is Express + TypeScript on the native MongoDB driver with Zod validation, Argon2 password hashing, Helmet, rate limiting, and Pino logging. API covered by Vitest + Supertest tests.',
+      problem:
+        'Most typing tests show a WPM number and stop there. Learners need to know which keys, patterns, and pauses slow them down — and they should not have to sign up just to practise.',
+      constraints: [
+        'Typing must work with no login and even with the backend down.',
+        'Anonymous results, settings, and personal bests stay on the device.',
+        'Keystroke timing must stay accurate — no input lag from change detection.',
+        'Leaderboard scores must not trust anything the client calculates.',
+      ],
+      whatYouShipped: [
+        'Typing test with time, words, quote, and zen modes plus punctuation and numbers.',
+        'Adaptive coach that finds weak keys, patterns, pauses, and recovery problems.',
+        'Results and progress pages with Chart.js history.',
+        'Optional account with cloud sync, multi-device history, and leaderboard.',
+        'Settings, themes, and accessibility options.',
+      ],
+      impact: [
+        'Offline-first design keeps the core test usable even during API downtime.',
+        'Login is optional, so first-time visitors start typing immediately.',
+        'WPM and accuracy are recalculated server-side from raw keystroke totals — client-sent scores are ignored and impossible character rates are rejected.',
+        'Argon2 hashing and rate-limited auth give a small app a production security floor.',
+      ],
+    },
+    {
       title: 'TubeAi',
       type: 'AI SaaS',
       status: 'OWNED · IN BUILD',
       statusClass: 'text-accent-amber border-accent-amber/40',
       description:
         'AI study companion for YouTube. Pulls transcripts, generates flashcards and review courses with Gemini, and gates usage by plan tier.',
-      imageUrl: './assets/images/projects/tubeai/tubeai.png',
+      imageUrl: './assets/images/projects/tubeai/tubeai.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'NestJS', icon: 'dns' },
@@ -710,7 +857,7 @@ export class PortfolioComponent implements AfterViewInit {
       statusClass: 'text-accent-amber border-accent-amber/40',
       description:
         'Hyperlocal marketplace and delivery platform — live chat, map-based discovery, real-time order tracking, and a 16-module backend.',
-      imageUrl: './assets/images/projects/zelo/zelo.png',
+      imageUrl: './assets/images/projects/zelo/zelo.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'NestJS', icon: 'dns' },
@@ -753,7 +900,7 @@ export class PortfolioComponent implements AfterViewInit {
       statusClass: 'text-accent-amber border-accent-amber/40',
       description:
         'Real-time collaborative document workspace. CRDT-backed co-editing, rich text via Tiptap, and an AI roadmap built on a horizontally-scalable spine.',
-      imageUrl: './assets/images/projects/docpilot-ai/docpilot-ai.png',
+      imageUrl: './assets/images/projects/docpilot-ai/docpilot-ai.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'NestJS', icon: 'dns' },
@@ -762,7 +909,7 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'Tiptap', icon: 'edit_note' },
       ],
       links: [],
-      videoUrl: '',
+      videoUrl: 'K28aMZyYcBg',
       subTitle: 'Real-Time Document Workspace — CRDT Co-Editing + AI Roadmap',
       myRole:
         'Solo full-stack owner. Built the Angular 21 + Tiptap editor with Yjs CRDT and @hocuspocus/provider for live presence and conflict-free merge. Backend is NestJS 11 with Hocuspocus server, JWT auth (rotating hashed refresh tokens), Mongoose persistence, and a Docker Compose stack (Redis, Mailpit, MinIO).',
@@ -796,7 +943,7 @@ export class PortfolioComponent implements AfterViewInit {
       statusClass: 'text-accent-amber border-accent-amber/40',
       description:
         'QR-coded emergency profile registry. A scan surfaces medical, identity, and emergency contact data through a public bridge token — no app install required.',
-      imageUrl: './assets/images/projects/aman-tag/aman-tag.png',
+      imageUrl: './assets/images/projects/aman-tag/aman-tag.jpg',
       tech: [
         { name: 'Angular 21', icon: 'data_object' },
         { name: 'NestJS', icon: 'dns' },
@@ -834,7 +981,7 @@ export class PortfolioComponent implements AfterViewInit {
     },
   ]);
 
-  projectFilters = ['All', 'SaaS', 'AI SaaS', 'Marketplace', 'Collab Tool'];
+  projectFilters = ['All', 'SaaS', 'AI SaaS', 'EdTech', 'E-commerce', 'Marketplace', 'Collab Tool', 'Web App'];
   activeProjectFilter = signal('All');
 
   filteredProjects = computed(() => {
@@ -865,52 +1012,10 @@ export class PortfolioComponent implements AfterViewInit {
       project: 'Paragon Logics',
     },
     {
-      value: '8+',
+      value: '11+',
       label: 'Shipped products',
       context: 'Owned SaaS and client builds — live in production or under active development.',
       project: 'buildwithimran.online',
-    },
-  ]);
-
-  packages = signal([
-    {
-      title: 'Production MVP Build',
-      price: 'Scope a Project',
-      description:
-        'Take an idea to a live, multi-tenant product. Auth, data model, core feature, and cloud deploy — production-shaped from day one.',
-      deliverables: [
-        'Auth: JWT, Google Sign-In, optional TOTP 2FA',
-        'Multi-tenant data model with isolation',
-        'Angular front end + Node/NestJS API',
-        'Deployed on AWS, EC2, or Hostinger',
-      ],
-      timeline: '4–6 weeks',
-    },
-    {
-      title: 'Backend & Worker Layer',
-      price: 'Scope a Project',
-      description:
-        'The infrastructure most teams skip until it breaks: queues, workers, schedulers, and structured logging — added to your existing stack.',
-      deliverables: [
-        'BullMQ queues on Redis with retries and DLQ',
-        'Worker threads for CPU-bound jobs',
-        'Cron services that survive restarts',
-        'Pino-backed structured logging',
-      ],
-      timeline: '2–4 weeks',
-    },
-    {
-      title: 'Cloud Deploy & Hardening',
-      price: 'Scope a Project',
-      description:
-        'Take a working app from your laptop to a hardened production deploy — CI/CD, runtime config, secrets, and uptime patterns wired in.',
-      deliverables: [
-        'AWS Amplify or EC2 provisioning',
-        'CI/CD pipeline with runtime config injection',
-        'Helmet, rate limiting, sanitization, CORS',
-        'Argon2 hashing + 2FA where it matters',
-      ],
-      timeline: '1–3 weeks',
     },
   ]);
 
@@ -972,46 +1077,6 @@ export class PortfolioComponent implements AfterViewInit {
       label: 'Real-time layer',
       value: 'Socket.io reusing JWT handshake',
       icon: 'bolt',
-    },
-  ]);
-
-  // Work process — repeatable spine for every build
-  workProcess = signal([
-    {
-      step: '01',
-      title: 'Map the system',
-      detail:
-        'Data model and domain boundaries first — before a single screen. Decide what is multi-tenant, what is shared, and where state lives.',
-    },
-    {
-      step: '02',
-      title: 'Ship the spine',
-      detail:
-        'Auth, persistence, and one end-to-end flow up first — production-shaped, not a prototype. Everything else hangs off this skeleton.',
-    },
-    {
-      step: '03',
-      title: 'Build in modules',
-      detail:
-        'Each feature is a self-contained slice — route, store, API surface. Boundaries stay clean so the codebase scales past one engineer.',
-    },
-    {
-      step: '04',
-      title: 'Harden the worker layer',
-      detail:
-        'Move expensive or scheduled work off the request path — BullMQ jobs, Redis-backed locks, cron services that survive restarts.',
-    },
-    {
-      step: '05',
-      title: 'Deploy with intent',
-      detail:
-        'AWS Amplify, EC2, or Hostinger — picked for the workload. CI/CD wired in, runtime config injected at build, secrets out of the repo.',
-    },
-    {
-      step: '06',
-      title: 'Watch, fix, iterate',
-      detail:
-        'Structured Pino logging, real telemetry, short feedback loops. Production is where the work starts — not where it ends.',
     },
   ]);
 
@@ -1084,7 +1149,15 @@ export class PortfolioComponent implements AfterViewInit {
   }
 
   openVideoModal(videoId: string): void {
+    this.sizeVideoPlayer();
     this.selectedVideoId.set(videoId);
+  }
+
+  sizeVideoPlayer(): void {
+    // Modal is max-w-4xl (896px) with 16px side padding
+    const width = Math.min(window.innerWidth, 896) - 32;
+    this.videoWidth.set(width);
+    this.videoHeight.set(Math.round((width * 9) / 16));
   }
 
   closeVideoModal(): void {

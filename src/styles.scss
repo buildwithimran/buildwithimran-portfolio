@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 /* Global polish */
+html,
+body {
+  /* Decorative glows and floating pills may extend past the edge; clip them
+     instead of letting the page scroll sideways. clip (not hidden) keeps the sticky nav working. */
+  overflow-x: clip;
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem; /* leaves room for the sticky 80px navbar */

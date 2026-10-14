@@ -26,7 +26,7 @@
     </div>
 
     <!-- Desktop nav -->
-    <div class="hidden lg:flex items-center gap-1">
+    <div class="hidden xl:flex items-center gap-1">
       @for (link of navLinks; track link.id) {
         <a
           class="px-4 py-2 rounded-md text-[11px] font-mono font-medium transition-all nav-pill uppercase tracking-[0.22em]"
@@ -86,7 +86,7 @@
       <button
         type="button"
         (click)="toggleMobileMenu()"
-        class="lg:hidden w-10 h-10 flex items-center justify-center border border-border-bright rounded-md text-white hover:border-primary hover:text-primary transition-colors"
+        class="xl:hidden w-10 h-10 flex items-center justify-center border border-border-bright rounded-md text-white hover:border-primary hover:text-primary transition-colors"
         [attr.aria-expanded]="mobileMenuOpen()"
         aria-label="Toggle navigation menu"
       >
@@ -99,7 +99,7 @@
 
   <!-- Mobile menu panel -->
   @if (mobileMenuOpen()) {
-    <div class="lg:hidden border-t border-border-dark bg-background-dark/95 backdrop-blur-xl animate-fade-in">
+    <div class="xl:hidden border-t border-border-dark bg-background-dark/95 backdrop-blur-xl animate-fade-in">
       <div class="max-w-[1300px] mx-auto px-6 py-5 flex flex-col gap-1">
         @for (link of navLinks; track link.id) {
           <a
@@ -198,48 +198,18 @@
           </p>
         </div>
 
-        <!-- Trust signals: real production stack -->
-        <div class="flex flex-wrap items-center gap-3 hero-enter" data-delay="4">
-          <div class="stat-badge">
-            <span class="material-symbols-outlined text-primary !text-xl">rocket_launch</span>
-            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
-              >Owned SaaS in production</span
-            >
-          </div>
-          <div class="stat-badge">
-            <span class="text-primary font-black text-lg font-mono"
-              >{{ professionalWorkYears }}+</span
-            >
-            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
-              >Years shipping</span
-            >
-          </div>
-          <div class="stat-badge">
-            <span class="material-symbols-outlined text-accent-blue !text-xl">memory</span>
-            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
-              >Redis · BullMQ · Workers</span
-            >
-          </div>
-          <div class="stat-badge">
-            <span class="material-symbols-outlined text-accent-amber !text-xl">cloud</span>
-            <span class="text-[11px] text-ink-muted font-mono uppercase tracking-[0.18em]"
-              >AWS · EC2 · Hostinger</span
-            >
-          </div>
-        </div>
-
         <!-- CTAs -->
         <div class="flex flex-wrap items-center gap-4 hero-enter" data-delay="5">
           <a
             href="#projects"
-            class="bg-primary text-background-dark px-8 py-4 font-black uppercase tracking-[0.2em] text-xs rounded-md hover:scale-[1.03] transition-transform shadow-glow-soft flex items-center gap-2"
+            class="bg-primary text-background-dark px-8 py-4 font-black uppercase tracking-[0.2em] text-xs rounded-md hover:scale-[1.03] transition-transform shadow-glow-soft w-full sm:w-auto flex items-center justify-center gap-2"
           >
             See the Work
             <span class="material-symbols-outlined !text-lg">arrow_forward</span>
           </a>
           <a
             href="#contact"
-            class="border border-border-bright text-white px-7 py-4 text-xs font-black uppercase tracking-[0.2em] rounded-md hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
+            class="border border-border-bright text-white px-7 py-4 text-xs font-black uppercase tracking-[0.2em] rounded-md hover:border-primary hover:text-primary transition-colors w-full sm:w-auto flex items-center justify-center gap-2"
           >
             Start a Project
           </a>
@@ -313,14 +283,14 @@
           </div>
           <div
             class="telemetry-pill cyan"
-            style="top: 52%; right: -10%; animation: float-slow 8s ease-in-out infinite 1s;"
+            style="top: 52%; right: -3%; animation: float-slow 8s ease-in-out infinite 1s;"
           >
             <span class="dot"></span>
             <span>queue:jobs · 2.4k/min</span>
           </div>
           <div
             class="telemetry-pill amber"
-            style="bottom: 8%; left: -6%; animation: float-slow 9s ease-in-out infinite 0.5s;"
+            style="bottom: 30%; left: -6%; animation: float-slow 9s ease-in-out infinite 0.5s;"
           >
             <span class="dot"></span>
             <span>deploy: success</span>
@@ -480,10 +450,10 @@
         Outcomes, <span class="text-ink-faint">not adjectives</span>
       </h2>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
       @for (metric of impactMetrics(); track metric.label; let i = $index) {
         <div
-          class="relative surface p-7 overflow-hidden group scroll-animate"
+          class="relative surface p-6 sm:p-7 overflow-hidden group scroll-animate"
           [style.transition-delay]="i * 80 + 'ms'"
         >
           <span
@@ -555,12 +525,12 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div
-                class="experience-card p-7 scroll-animate w-full"
+                class="experience-card p-5 sm:p-7 scroll-animate w-full"
                 [style.transition-delay]="i * 100 + 'ms'"
               >
                 <!-- Header -->
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                  <div class="flex items-start gap-5">
+                  <div class="flex items-start gap-4 sm:gap-5">
                     <a
                       [href]="item.companyUrl"
                       target="_blank"
@@ -573,7 +543,7 @@
                       />
                     </a>
                     <div>
-                      <h3 class="text-xl font-bold text-white tracking-tight">{{ item.title }}</h3>
+                      <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">{{ item.title }}</h3>
                       <div class="flex items-center gap-3 mt-1 flex-wrap">
                         <a
                           [href]="item.companyUrl"
@@ -862,111 +832,18 @@
   </section>
 
   <!-- ============================================================
-       WORK PROCESS
-  ============================================================ -->
-  <section id="process" class="py-28 lg:py-32">
-    <div class="max-w-[1300px] mx-auto px-6">
-      <div class="mb-20 scroll-animate">
-        <div class="section-eyebrow mb-5">[ 06 ] · Engineering process</div>
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-          <h2
-            class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-[0.95]"
-          >
-            From data model <br /><span class="text-ink-faint">to deploy</span>
-          </h2>
-          <p class="text-ink-muted text-base max-w-md leading-relaxed">
-            A repeatable six-stage process — refined across owned SaaS launches and senior client
-            builds. Every project gets the same spine.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        @for (step of workProcess(); track step.step; let i = $index) {
-          <div
-            class="process-step scroll-animate"
-            [style.transition-delay]="i * 80 + 'ms'"
-          >
-            <span class="step-num">{{ step.step }}</span>
-            <h3 class="text-lg font-bold text-white mt-1 mb-2 tracking-tight">
-              {{ step.title }}
-            </h3>
-            <p class="text-sm text-ink-muted leading-relaxed">{{ step.detail }}</p>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SERVICES / PACKAGES
-  ============================================================ -->
-  <section id="services" class="py-24 lg:py-28">
-    <div class="max-w-[1300px] mx-auto px-6">
-      <div class="mb-16 scroll-animate">
-        <div class="section-eyebrow mb-5">[ 07 ] · Engagements</div>
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-          <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase">
-            Ways we <span class="text-ink-faint">can work together</span>
-          </h2>
-          <p class="text-ink-muted text-base max-w-md leading-relaxed">
-            Three focused engagements — sized for the work, scoped for delivery, priced on outcome.
-          </p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        @for (pkg of packages(); track pkg.title; let i = $index) {
-          <div class="package-card scroll-animate" [style.transition-delay]="i * 80 + 'ms'">
-            <div class="flex-1">
-              <span
-                class="text-[10px] font-mono uppercase tracking-[0.22em] text-primary mb-2 block"
-                >Package · 0{{ i + 1 }}</span
-              >
-              <h3 class="text-xl font-bold text-white mb-3 tracking-tight">{{ pkg.title }}</h3>
-              <p class="text-ink-muted text-sm mb-6 leading-relaxed">{{ pkg.description }}</p>
-              <ul class="space-y-2.5 mb-7">
-                @for (item of pkg.deliverables; track item) {
-                  <li class="flex items-start gap-2.5 text-ink text-sm">
-                    <span class="material-symbols-outlined text-primary/80 !text-[16px] mt-0.5"
-                      >check_circle</span
-                    >
-                    <span>{{ item }}</span>
-                  </li>
-                }
-              </ul>
-            </div>
-            <div class="mt-auto pt-4 border-t border-border-dark">
-              <a
-                href="#contact"
-                class="w-full block text-center bg-primary text-background-dark py-3 px-4 rounded-md text-[11px] font-black uppercase tracking-[0.2em] hover:scale-[1.02] transition-transform"
-              >
-                {{ pkg.price }}
-              </a>
-              <p
-                class="text-center text-[10px] font-mono uppercase tracking-[0.2em] text-ink-faint mt-3"
-              >
-                Timeline · {{ pkg.timeline }}
-              </p>
-            </div>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
        CONTACT
   ============================================================ -->
   <section id="contact" class="relative border-t border-border-muted pt-28 pb-20 px-6">
-    <div class="max-w-4xl mx-auto w-full scroll-animate">
-      <div class="section-eyebrow mb-6">[ 08 ] · Next step</div>
+    <div class="max-w-4xl mx-auto w-full text-center scroll-animate">
+      <div class="section-eyebrow mb-6">[ 06 ] · Next step</div>
       <h2
         class="text-4xl md:text-6xl font-black mb-5 leading-[0.95] tracking-tight uppercase"
       >
         Got a system <br />
         to <span class="text-primary">ship?</span>
       </h2>
-      <p class="text-ink-muted max-w-xl text-base leading-relaxed mb-12">
+      <p class="text-ink-muted max-w-xl mx-auto text-base leading-relaxed mb-12">
         New build, a stalled MVP, or a backend that needs queues and workers under it — send the
         brief. Replies inside 24 hours.
       </p>
@@ -1051,7 +928,7 @@
 @if (showScrollToTop()) {
   <button
     (click)="scrollToTop()"
-    class="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-primary text-background-dark rounded-md shadow-glow-soft hover:scale-110 transition-all duration-300 animate-slide-in-up"
+    class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary text-background-dark rounded-md shadow-glow-soft hover:scale-110 transition-all duration-300 animate-slide-in-up"
     aria-label="Scroll to top"
   >
     <span class="material-symbols-outlined !text-2xl">keyboard_arrow_up</span>
@@ -1065,20 +942,21 @@
     (click)="closeVideoModal()"
   >
     <div
-      class="relative w-full max-w-4xl aspect-video p-4 animate-zoom-in"
+      class="relative w-full max-w-4xl px-4 animate-zoom-in"
       (click)="$event.stopPropagation()"
     >
       <button
         (click)="closeVideoModal()"
-        class="absolute -top-4 -right-4 z-10 w-11 h-11 flex items-center justify-center bg-primary text-background-dark rounded-md text-2xl hover:scale-110 hover:rotate-90 transition-transform duration-300"
+        class="absolute -top-14 right-4 z-10 w-11 h-11 flex items-center justify-center bg-primary text-background-dark rounded-md text-2xl hover:scale-110 hover:rotate-90 transition-transform duration-300"
+        aria-label="Close video"
       >
         &times;
       </button>
-      <div class="w-full h-full rounded-md shadow-2xl shadow-primary/20 overflow-hidden">
+      <div class="w-full aspect-video rounded-md shadow-2xl shadow-primary/20 overflow-hidden bg-black">
         <youtube-player
           [videoId]="videoId"
-          [width]="width"
-          [height]="height"
+          [width]="videoWidth()"
+          [height]="videoHeight()"
           [playerVars]="{ autoplay: 1, modestbranding: 1, rel: 0 }"
         ></youtube-player>
       </div>
@@ -1096,7 +974,7 @@
       class="relative w-full max-w-5xl max-h-[90vh] bg-card-dark border border-border-dark rounded-md animate-zoom-in flex flex-col"
       (click)="$event.stopPropagation()"
     >
-      <div class="flex-shrink-0 p-6 flex items-center justify-between border-b border-border-dark">
+      <div class="flex-shrink-0 p-5 md:p-6 flex items-start justify-between gap-4 border-b border-border-dark">
         <div>
           <span class="text-[10px] font-mono uppercase tracking-[0.28em] text-ink-faint">Case study</span>
           <h2 class="text-2xl font-bold text-primary uppercase tracking-tight mt-1">
@@ -1111,7 +989,7 @@
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
-      <div class="flex-1 p-8 overflow-y-auto">
+      <div class="flex-1 p-5 md:p-8 overflow-y-auto">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="lg:col-span-2 space-y-8">
             <div>
@@ -1142,7 +1020,7 @@
               <p class="text-ink leading-relaxed text-sm">{{ project.myRole }}</p>
             </div>
           </div>
-          <div class="space-y-8 bg-background-dark p-6 rounded-md border border-border-dark">
+          <div class="space-y-8 bg-background-dark p-5 md:p-6 rounded-md border border-border-dark">
             <div>
               <h3 class="text-xs font-mono font-bold uppercase tracking-[0.24em] text-accent-blue mb-3">
                 The Impact
@@ -1193,7 +1071,7 @@
   <div
     class="max-w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
   >
-    <div class="text-ink-faint text-[10px] font-mono uppercase tracking-[0.22em]">
+    <div class="text-ink-faint text-[10px] font-mono uppercase tracking-[0.22em] text-center md:text-left">
       © {{ currentYear }} · MUHAMMAD IMRAN ARSHAD · {{ domain.toUpperCase() }}
     </div>
     <div class="flex items-center gap-3">

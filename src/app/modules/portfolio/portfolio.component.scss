@@ -117,6 +117,13 @@
 .hero-photo-frame {
   position: relative;
   isolation: isolate;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .hero-photo-frame {
+    max-width: 26rem;
+  }
 }
 .hero-photo-frame::before {
   /* Cyan & lime ambient halo behind the photo */
@@ -146,10 +153,8 @@
   position: relative;
   width: 100%;
   /* Square on mobile so the column doesn't dominate the viewport;
-     taller portrait at lg+ where the layout is two-column. */
+     kept square at lg+ so the hero stays compact. */
   aspect-ratio: 1 / 1;
-  max-width: 28rem;
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
   background: linear-gradient(180deg, #15171a, #0d0e10);
@@ -158,12 +163,6 @@
     0 30px 80px -30px rgba(0, 0, 0, 0.8),
     0 0 60px -20px rgba(209, 254, 23, 0.18);
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-@media (min-width: 1024px) {
-  .hero-photo {
-    aspect-ratio: 4 / 5;
-    max-width: none;
-  }
 }
 
 .hero-photo img {
@@ -213,7 +212,7 @@
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .telemetry-pill {
     display: inline-flex;
   }
@@ -287,17 +286,6 @@
   background: #15171a;
   border: 1px solid #26292e;
   border-radius: 6px;
-}
-
-.stat-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(21, 23, 26, 0.7);
-  border: 1px solid #26292e;
-  border-radius: 6px;
-  padding: 0.5rem 0.875rem;
-  backdrop-filter: blur(6px);
 }
 
 .glass-card {
@@ -442,39 +430,6 @@
   position: absolute;
   background: linear-gradient(90deg, transparent, rgba(209, 254, 23, 0.4), transparent);
   height: 1px;
-}
-
-/* ---------- Process steps ---------- */
-.process-step {
-  position: relative;
-  padding: 1.75rem 1.5rem 1.5rem;
-  background: #15171a;
-  border: 1px solid #26292e;
-  border-radius: 8px;
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.process-step:hover {
-  border-color: rgba(209, 254, 23, 0.4);
-  transform: translateY(-3px);
-}
-.process-step .step-num {
-  position: absolute;
-  top: -16px;
-  left: 20px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background: #0d0e10;
-  border: 1px solid rgba(209, 254, 23, 0.35);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 600;
-  color: #d1fe17;
 }
 
 /* ---------- Resume / contact cards ---------- */
@@ -632,22 +587,17 @@
 .timeline-item:hover .timeline-dot {
   transform: translateY(-50%) rotate(45deg) scale(1.05);
 }
-
-/* ---------- Package / service card ---------- */
-.package-card {
-  background: #15171a;
-  border: 1px solid #26292e;
-  border-radius: 8px;
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  transition:
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-.package-card:hover {
-  border-color: rgba(209, 254, 23, 0.5);
-  transform: translateY(-4px);
+@media (max-width: 639px) {
+  .timeline-item {
+    padding-left: 32px;
+    margin-bottom: 32px;
+  }
+  .timeline-container::after {
+    left: 7px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
 }
 
 /* ---------- Section header marker (decorative) ---------- */
