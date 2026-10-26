@@ -77,7 +77,7 @@ export class PortfolioComponent implements AfterViewInit {
   fullName = 'Muhammad Imran Arshad';
   phone = '+92-306-8444929';
   email = 'buildwithimran@gmail.com';
-  domain = 'buildwithimran.online';
+  domain = 'buildwithimran.pro';
   linkedInUrl = 'https://www.linkedin.com/in/buildwithimran';
   whatsAppUrl =
     'https://api.whatsapp.com/send/?phone=923068440929&text&type=phone_number&app_absent=0';
@@ -1015,7 +1015,7 @@ export class PortfolioComponent implements AfterViewInit {
       value: '11+',
       label: 'Shipped products',
       context: 'Owned SaaS and client builds — live in production or under active development.',
-      project: 'buildwithimran.online',
+      project: 'buildwithimran.pro',
     },
   ]);
 
