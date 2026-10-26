@@ -82,6 +82,7 @@ export class PortfolioComponent implements AfterViewInit {
   whatsAppUrl =
     'https://api.whatsapp.com/send/?phone=923068440929&text&type=phone_number&app_absent=0';
   githubUrl = 'https://github.com/buildwithimran';
+  youtubeUrl = 'https://www.youtube.com/@MuhammadImran-p4w';
   currentYear = new Date().getFullYear();
   profileImageUrl = 'assets/images/me.png';
   resumeLastUpdated = 'Mar 2026';
@@ -516,6 +517,53 @@ export class PortfolioComponent implements AfterViewInit {
       ],
     },
     {
+      title: 'Dinyx',
+      type: 'SaaS',
+      status: 'OWNED · LIVE DEMO',
+      statusClass: 'text-primary border-primary/30',
+      description:
+        'Owned restaurant operations platform. One NestJS API behind 7 apps: back office, POS, waiter, owner, table ordering, pickup, and customer portal.',
+      imageUrl: './assets/images/projects/dinyx/dinyx.jpg',
+      tech: [
+        { name: 'NestJS', icon: 'dns' },
+        { name: 'Angular', icon: 'data_object' },
+        { name: 'Flutter', icon: 'phone_iphone' },
+        { name: 'MongoDB', icon: 'database' },
+        { name: 'SockJS', icon: 'bolt' },
+      ],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://dinyx.buildwithimran.pro',
+        },
+      ],
+      videoUrl: '',
+      subTitle: 'Restaurant Operations Platform — One API, 7 Apps',
+      myRole:
+        'Solo owner. Wrote the NestJS 12 backend from scratch against the contract of 7 existing frontends: layered modules over abstract repositories with Mongoose, JWT auth with Argon2 and OTP verification, SockJS real-time order events, Stripe and a fake payment gateway for demo mode, PDFKit and ExcelJS exports, S3 or local media storage, Pino logging, Sentry, and Terminus health checks. One monorepo with a GitHub Actions pipeline that tests, builds and deploys the API and the web apps to EC2.',
+      problem:
+        'Restaurants run dine-in, pickup, staff and reporting on separate tools. Dinyx puts table ordering, the waiter flow, the POS, the owner dashboard and the customer portal on one backend.',
+      constraints: [
+        'Backend had to match 7 existing frontends exactly, endpoint by endpoint.',
+        'Orders must reach waiters and the kitchen in real time.',
+        'Demo mode must run safely in public: fake payments, console mail, local storage.',
+        'Multi-restaurant data with role checks on every endpoint.',
+      ],
+      whatYouShipped: [
+        'NestJS API: auth, restaurants, menus, tables, orders, payments, staff, reports, media.',
+        'Real-time order events over SockJS for waiter and kitchen screens.',
+        'Back office, table ordering, pickup and customer portal deployed as web apps.',
+        'POS, waiter and owner mobile apps (Flutter / Ionic) pointed at the same API.',
+        'Unit and end-to-end tests run on every push before deploy.',
+      ],
+      impact: [
+        'One API replaced the backend the 7 apps used to depend on.',
+        'Swappable drivers (payments, mail, storage) let the same build run as a public demo or in production.',
+        'Monorepo pipeline deploys the API and every web app on push.',
+      ],
+    },
+    {
       title: 'LoyaltyTap',
       type: 'SaaS',
       status: 'OWNED · LIVE',
@@ -532,7 +580,7 @@ export class PortfolioComponent implements AfterViewInit {
         {
           name: 'VISIT LIVE',
           icon: 'open_in_new',
-          url: 'https://loyalty-tap.buildwithimran.online',
+          url: 'https://loyalty-tap.buildwithimran.pro',
         },
       ],
       videoUrl: 'pt5d_PdaYs8',
@@ -582,7 +630,7 @@ export class PortfolioComponent implements AfterViewInit {
         {
           name: 'VISIT LIVE',
           icon: 'open_in_new',
-          url: 'https://jdrive.buildwithimran.online',
+          url: 'https://jdrive.buildwithimran.pro',
         },
       ],
       videoUrl: '',
@@ -679,7 +727,7 @@ export class PortfolioComponent implements AfterViewInit {
         {
           name: 'VISIT LIVE',
           icon: 'open_in_new',
-          url: 'https://veolms.buildwithimran.online',
+          url: 'https://veolms.buildwithimran.pro',
         },
       ],
       videoUrl: 'slFdr3aJCpg',
@@ -709,6 +757,53 @@ export class PortfolioComponent implements AfterViewInit {
         'Embedding search runs in-process — no paid vector database needed to ship semantic search.',
         'Queue-backed email and campaigns keep API latency flat during bulk sends.',
         '30+ isolated NestJS modules let teacher, payment, and community features ship independently.',
+      ],
+    },
+    {
+      title: 'OpenRole',
+      type: 'AI SaaS',
+      status: 'OWNED · LIVE',
+      statusClass: 'text-primary border-primary/30',
+      description:
+        'Owned job search engine. Saved searches crawl job sources on a schedule, every role is scored against your resumes, and the shortlist lands in your inbox.',
+      imageUrl: './assets/images/projects/openrole/openrole.jpg',
+      tech: [
+        { name: 'Next.js 16', icon: 'web' },
+        { name: 'NestJS 12', icon: 'dns' },
+        { name: 'MongoDB', icon: 'database' },
+        { name: 'BullMQ', icon: 'memory' },
+        { name: 'Playwright', icon: 'smart_toy' },
+      ],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://openrole.buildwithimran.pro',
+        },
+      ],
+      videoUrl: '',
+      subTitle: 'Personal Job Search Engine — Scheduled Crawls, Resume Scoring, Email Shortlists',
+      myRole:
+        'Solo full-stack owner. Built the Next.js 16 + React 19 frontend (TanStack Query, Table and Virtual, React Hook Form + Zod) and a NestJS 12 API plus a separate worker on BullMQ and Redis for crawling, scoring, emails and auto apply. Auth uses short-lived JWTs with rotated, HMAC-hashed refresh cookies; resumes live in GridFS; job emails go out through Resend. CI runs lint, typecheck, tests, build and a dependency audit, then deploys to EC2.',
+      problem:
+        'Job hunting means checking the same boards every day, reading posts that do not fit, and losing track of what was applied to. OpenRole does the checking and filtering, and sends only the roles worth reading.',
+      constraints: [
+        'Crawls must respect each source quota and never block the API.',
+        'Duplicate posts across sources must collapse into one job.',
+        'Resume uploads checked by file signature with a 5 MB limit.',
+        'Signup closed: built multi-user but run as a personal tool.',
+      ],
+      whatYouShipped: [
+        'Saved searches that run on a schedule across job sources.',
+        'Eligibility and match scoring of every job against each resume.',
+        'Email shortlists through Resend and live updates over SSE.',
+        'Playwright auto apply limited to job-board URLs, one fresh browser context each time.',
+        'Audit log of sign-ins, setting changes, applications and emails.',
+      ],
+      impact: [
+        'A daily manual search becomes one email of pre-filtered roles.',
+        'Queue-based worker keeps the API fast while crawls and scoring run.',
+        'Dependency audit in CI blocks deploys with high-severity advisories.',
       ],
     },
     {
@@ -778,7 +873,7 @@ export class PortfolioComponent implements AfterViewInit {
         {
           name: 'VISIT LIVE',
           icon: 'open_in_new',
-          url: 'https://tempo-drill.web.app',
+          url: 'https://tempo-drill.buildwithimran.pro',
         },
       ],
       videoUrl: '',
@@ -822,7 +917,13 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'Redis', icon: 'bolt' },
         { name: 'Gemini', icon: 'auto_awesome' },
       ],
-      links: [],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://tube-ai.buildwithimran.pro',
+        },
+      ],
       videoUrl: '',
       subTitle: 'AI Learning SaaS — YouTube Transcripts to Flashcards',
       myRole:
@@ -865,7 +966,13 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'BullMQ', icon: 'memory' },
         { name: 'Leaflet', icon: 'map' },
       ],
-      links: [],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://zelo.buildwithimran.pro',
+        },
+      ],
       videoUrl: '',
       subTitle: 'Hyperlocal Marketplace — Real-Time Discovery, Chat, and Orders',
       myRole:
@@ -908,7 +1015,13 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'Hocuspocus', icon: 'bolt' },
         { name: 'Tiptap', icon: 'edit_note' },
       ],
-      links: [],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://docpilot-ai.buildwithimran.pro',
+        },
+      ],
       videoUrl: 'K28aMZyYcBg',
       subTitle: 'Real-Time Document Workspace — CRDT Co-Editing + AI Roadmap',
       myRole:
@@ -951,7 +1064,13 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'JWT', icon: 'shield_lock' },
         { name: 'Cloudinary', icon: 'cloud_upload' },
       ],
-      links: [],
+      links: [
+        {
+          name: 'VISIT LIVE',
+          icon: 'open_in_new',
+          url: 'https://amantag.buildwithimran.pro',
+        },
+      ],
       videoUrl: '',
       subTitle: 'Emergency Profile Registry — QR-Coded, Bridge-Token Access',
       myRole:
