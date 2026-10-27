@@ -586,7 +586,7 @@ export class PortfolioComponent implements AfterViewInit {
       videoUrl: 'pt5d_PdaYs8',
       subTitle: 'Multi-tenant Loyalty & Rewards SaaS — Owned Product',
       myRole:
-        'Solo full-stack owner. Architected a modular Angular 21 app (standalone components, lazy-loaded feature routes, route guards, HTTP auth interceptor, i18n, SEO) split across merchant, customer, super-admin, visit, and public surfaces. Designed and built the Express + Mongoose API as domain modules (merchant, customer, super-admin, subscription, public-site) with JWT auth, TOTP-based 2FA, Cloudinary uploads, Google Sign-In, and background cron jobs for account deletion, subscription reminders, and scan-claim expiry. Deployed on AWS Amplify + Firebase Hosting.',
+        'Solo full-stack owner. Architected a modular Angular 21 app (standalone components, lazy-loaded feature routes, route guards, HTTP auth interceptor, i18n, SEO) split across merchant, customer, super-admin, visit, and public surfaces. Designed and built the Express + Mongoose API as domain modules (merchant, customer, super-admin, subscription, public-site) with JWT auth, TOTP-based 2FA, Cloudinary uploads, Google Sign-In, and background cron jobs for account deletion, subscription reminders, and scan-claim expiry. Frontends on Firebase Hosting; API on AWS EC2 behind nginx, deployed by GitHub Actions.',
       problem:
         'Independent merchants needed a low-friction loyalty program they could run from a single QR / NFC tap — with rewards, tiered customer levels, and a control plane to operate the business — without paying for a heavy POS suite.',
       constraints: [
@@ -602,7 +602,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Super-admin control plane: merchant management, subscription packages, billing oversight.',
         'Visit flow: short-link QR resolves to a public scan page that mints visit tokens and updates points in real time.',
         'Cron services: auto-delete inactive accounts, subscription reminders, scan-claim expiry.',
-        'AWS Amplify build pipeline injecting runtime config (API URL, Google client ID) into the SPA.',
+        'Firebase Hosting for both SPAs with a runtime env.js (API URL, Google client ID); API on AWS EC2 behind nginx, deployed by GitHub Actions.',
       ],
       impact: [
         'Replaced manual loyalty workflows with self-serve SaaS — merchants onboard, configure rewards, and go live without engineering support.',
@@ -624,7 +624,7 @@ export class PortfolioComponent implements AfterViewInit {
         { name: 'NestJS', icon: 'dns' },
         { name: 'MongoDB', icon: 'database' },
         { name: 'Cloudinary', icon: 'cloud_upload' },
-        { name: 'AWS Amplify', icon: 'cloud' },
+        { name: 'Firebase Hosting', icon: 'cloud' },
       ],
       links: [
         {
@@ -702,7 +702,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Frontend split into auth, dashboard, and settings feature modules.',
       ],
       impact: [
-        'Single deployment serves AWS Amplify (web) and Firebase Hosting (mirror) from the same build.',
+        'Web app on Firebase Hosting; API on AWS EC2 behind nginx, deployed by GitHub Actions on push.',
         'Socket.io handshake reuses the JWT layer — no separate session store needed.',
         'Feature-based Angular structure keeps real-time, auth, and settings concerns isolated.',
         'Backend stays lean (~3 route domains) so iteration on the real-time layer is fast.',
